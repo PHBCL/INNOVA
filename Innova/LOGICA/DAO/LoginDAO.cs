@@ -9,20 +9,24 @@ namespace Innova.DAO
 {
     public class LoginDAO
     {
-        public USUARIO ValidarUsuario(UsuarioDTO usuarioValidar)
+        public UsuarioDTO ValidarUsuario(UsuarioDTO usuarioValidar)
         {
             try
             {
                 using (InnovaDataClassesDataContext db = new InnovaDataClassesDataContext())
                 {
-                    USUARIO usuario = db.USUARIOs.Where(p => p.USUARIO1 == usuarioValidar._usuario && p.PASSWORD == usuarioValidar._password).Select(p => p).FirstOrDefault();
-                    if (usuario != null)
+                    USUARIO resp = db.USUARIOs.Where(p => p.USUARIO1 == usuarioValidar._usuario && p.PASSWORD == usuarioValidar._password).Select(p => p).FirstOrDefault();
+                    UsuarioDTO usuario = new UsuarioDTO();
+                 
+                    if (resp != null)
                     {
+                        usuario._usuario = resp.USUARIO1;
+                        usuario._password = resp.PASSWORD;
                         return usuario;
                     }
                     else
                     { 
-                        return null;
+                        return usuario;
                     }
                 }
             }

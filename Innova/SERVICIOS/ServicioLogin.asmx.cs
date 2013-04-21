@@ -24,8 +24,8 @@ namespace Innova.SERVICIOS
 
         [WebMethod]
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
-        public USUARIO Login(string usuario, string password)
-        {
+        public UsuarioDTO Login(string usuario, string password)
+        {   
             try
             {
                 UsuarioDTO usuarioRegistrar = new UsuarioDTO(usuario, password);

@@ -245,8 +245,6 @@ namespace Innova.LOGICA.BDD
 		
 		private System.Nullable<System.DateTime> _FECHA_INGRESO;
 		
-		private System.Data.Linq.Binary _TIMESTAMP;
-		
 		private EntityRef<VALORACIONE> _VALORACIONE;
 		
 		private EntityRef<USUARIO> _USUARIO;
@@ -271,8 +269,6 @@ namespace Innova.LOGICA.BDD
     partial void OnID_VALORACIONChanged();
     partial void OnFECHA_INGRESOChanging(System.Nullable<System.DateTime> value);
     partial void OnFECHA_INGRESOChanged();
-    partial void OnTIMESTAMPChanging(System.Data.Linq.Binary value);
-    partial void OnTIMESTAMPChanged();
     #endregion
 		
 		public COMENTARIO()
@@ -283,7 +279,7 @@ namespace Innova.LOGICA.BDD
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_COMENTARIO", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_COMENTARIO", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int ID_COMENTARIO
 		{
 			get
@@ -303,7 +299,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_USUARIO_EMISOR", DbType="Int", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_USUARIO_EMISOR", DbType="Int")]
 		public System.Nullable<int> ID_USUARIO_EMISOR
 		{
 			get
@@ -327,7 +323,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_USUARIO_RECEPTOR", DbType="Int", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_USUARIO_RECEPTOR", DbType="Int")]
 		public System.Nullable<int> ID_USUARIO_RECEPTOR
 		{
 			get
@@ -351,7 +347,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COMENTARIO_CORTA", DbType="VarChar(100)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COMENTARIO_CORTA", DbType="VarChar(100)")]
 		public string COMENTARIO_CORTA
 		{
 			get
@@ -371,7 +367,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COMENTARIO_LARGO", DbType="VarChar(1000)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_COMENTARIO_LARGO", DbType="VarChar(1000)")]
 		public string COMENTARIO_LARGO
 		{
 			get
@@ -391,7 +387,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_VALORACION", DbType="Int", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_VALORACION", DbType="Int")]
 		public System.Nullable<int> ID_VALORACION
 		{
 			get
@@ -415,7 +411,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FECHA_INGRESO", DbType="DateTime", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FECHA_INGRESO", DbType="DateTime")]
 		public System.Nullable<System.DateTime> FECHA_INGRESO
 		{
 			get
@@ -431,26 +427,6 @@ namespace Innova.LOGICA.BDD
 					this._FECHA_INGRESO = value;
 					this.SendPropertyChanged("FECHA_INGRESO");
 					this.OnFECHA_INGRESOChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TIMESTAMP", AutoSync=AutoSync.Always, DbType="rowversion", IsDbGenerated=true, IsVersion=true, UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary TIMESTAMP
-		{
-			get
-			{
-				return this._TIMESTAMP;
-			}
-			set
-			{
-				if ((this._TIMESTAMP != value))
-				{
-					this.OnTIMESTAMPChanging(value);
-					this.SendPropertyChanging();
-					this._TIMESTAMP = value;
-					this.SendPropertyChanged("TIMESTAMP");
-					this.OnTIMESTAMPChanged();
 				}
 			}
 		}
@@ -588,8 +564,6 @@ namespace Innova.LOGICA.BDD
 		
 		private System.Nullable<int> _VALORACION;
 		
-		private System.Data.Linq.Binary _TIMESTAMP;
-		
 		private EntitySet<COMENTARIO> _COMENTARIOs;
 		
     #region Extensibility Method Definitions
@@ -600,8 +574,6 @@ namespace Innova.LOGICA.BDD
     partial void OnID_VALORACIONChanged();
     partial void OnVALORACIONChanging(System.Nullable<int> value);
     partial void OnVALORACIONChanged();
-    partial void OnTIMESTAMPChanging(System.Data.Linq.Binary value);
-    partial void OnTIMESTAMPChanged();
     #endregion
 		
 		public VALORACIONE()
@@ -610,7 +582,7 @@ namespace Innova.LOGICA.BDD
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_VALORACION", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_VALORACION", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int ID_VALORACION
 		{
 			get
@@ -630,7 +602,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VALORACION", DbType="Int", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VALORACION", DbType="Int")]
 		public System.Nullable<int> VALORACION
 		{
 			get
@@ -646,26 +618,6 @@ namespace Innova.LOGICA.BDD
 					this._VALORACION = value;
 					this.SendPropertyChanged("VALORACION");
 					this.OnVALORACIONChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TIMESTAMP", AutoSync=AutoSync.Always, DbType="rowversion", IsDbGenerated=true, IsVersion=true, UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary TIMESTAMP
-		{
-			get
-			{
-				return this._TIMESTAMP;
-			}
-			set
-			{
-				if ((this._TIMESTAMP != value))
-				{
-					this.OnTIMESTAMPChanging(value);
-					this.SendPropertyChanging();
-					this._TIMESTAMP = value;
-					this.SendPropertyChanged("TIMESTAMP");
-					this.OnTIMESTAMPChanged();
 				}
 			}
 		}
@@ -734,8 +686,6 @@ namespace Innova.LOGICA.BDD
 		
 		private string _EMAIL;
 		
-		private System.Data.Linq.Binary _TIMESTAMP;
-		
 		private EntitySet<EXP_LABORALE> _EXP_LABORALEs;
 		
     #region Extensibility Method Definitions
@@ -754,8 +704,6 @@ namespace Innova.LOGICA.BDD
     partial void OnTELEFONOChanged();
     partial void OnEMAILChanging(string value);
     partial void OnEMAILChanged();
-    partial void OnTIMESTAMPChanging(System.Data.Linq.Binary value);
-    partial void OnTIMESTAMPChanged();
     #endregion
 		
 		public EMPRESA()
@@ -764,7 +712,7 @@ namespace Innova.LOGICA.BDD
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_EMPRESA", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_EMPRESA", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int ID_EMPRESA
 		{
 			get
@@ -784,7 +732,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE", DbType="VarChar(100)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE", DbType="VarChar(100)")]
 		public string NOMBRE
 		{
 			get
@@ -804,7 +752,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DESCRIPCION", DbType="VarChar(100)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DESCRIPCION", DbType="VarChar(100)")]
 		public string DESCRIPCION
 		{
 			get
@@ -824,7 +772,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DIRECCION", DbType="VarChar(100)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DIRECCION", DbType="VarChar(100)")]
 		public string DIRECCION
 		{
 			get
@@ -844,7 +792,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TELEFONO", DbType="VarChar(100)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TELEFONO", DbType="VarChar(100)")]
 		public string TELEFONO
 		{
 			get
@@ -864,7 +812,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EMAIL", DbType="VarChar(100)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EMAIL", DbType="VarChar(100)")]
 		public string EMAIL
 		{
 			get
@@ -880,26 +828,6 @@ namespace Innova.LOGICA.BDD
 					this._EMAIL = value;
 					this.SendPropertyChanged("EMAIL");
 					this.OnEMAILChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TIMESTAMP", AutoSync=AutoSync.Always, DbType="rowversion", IsDbGenerated=true, IsVersion=true, UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary TIMESTAMP
-		{
-			get
-			{
-				return this._TIMESTAMP;
-			}
-			set
-			{
-				if ((this._TIMESTAMP != value))
-				{
-					this.OnTIMESTAMPChanging(value);
-					this.SendPropertyChanging();
-					this._TIMESTAMP = value;
-					this.SendPropertyChanged("TIMESTAMP");
-					this.OnTIMESTAMPChanged();
 				}
 			}
 		}
@@ -968,8 +896,6 @@ namespace Innova.LOGICA.BDD
 		
 		private string _DESCRIPCION;
 		
-		private System.Data.Linq.Binary _TIMESTAMP;
-		
 		private EntityRef<INSTITUCIONE> _INSTITUCIONE;
 		
 		private EntityRef<USUARIO> _USUARIO;
@@ -990,8 +916,6 @@ namespace Innova.LOGICA.BDD
     partial void OnID_USUARIOChanged();
     partial void OnDESCRIPCIONChanging(string value);
     partial void OnDESCRIPCIONChanged();
-    partial void OnTIMESTAMPChanging(System.Data.Linq.Binary value);
-    partial void OnTIMESTAMPChanged();
     #endregion
 		
 		public EXP_EDUCACIONALE()
@@ -1001,7 +925,7 @@ namespace Innova.LOGICA.BDD
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_EXP_EDUCACION", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_EXP_EDUCACION", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int ID_EXP_EDUCACION
 		{
 			get
@@ -1021,7 +945,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FECHA_INICIO", DbType="DateTime", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FECHA_INICIO", DbType="DateTime")]
 		public System.Nullable<System.DateTime> FECHA_INICIO
 		{
 			get
@@ -1041,7 +965,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FECHA_TERMINO", DbType="DateTime", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FECHA_TERMINO", DbType="DateTime")]
 		public System.Nullable<System.DateTime> FECHA_TERMINO
 		{
 			get
@@ -1061,7 +985,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_INSTITUCION", DbType="Int", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_INSTITUCION", DbType="Int")]
 		public System.Nullable<int> ID_INSTITUCION
 		{
 			get
@@ -1085,7 +1009,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_USUARIO", DbType="Int", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_USUARIO", DbType="Int")]
 		public System.Nullable<int> ID_USUARIO
 		{
 			get
@@ -1109,7 +1033,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DESCRIPCION", DbType="VarChar(200)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DESCRIPCION", DbType="VarChar(200)")]
 		public string DESCRIPCION
 		{
 			get
@@ -1125,26 +1049,6 @@ namespace Innova.LOGICA.BDD
 					this._DESCRIPCION = value;
 					this.SendPropertyChanged("DESCRIPCION");
 					this.OnDESCRIPCIONChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TIMESTAMP", AutoSync=AutoSync.Always, DbType="rowversion", IsDbGenerated=true, IsVersion=true, UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary TIMESTAMP
-		{
-			get
-			{
-				return this._TIMESTAMP;
-			}
-			set
-			{
-				if ((this._TIMESTAMP != value))
-				{
-					this.OnTIMESTAMPChanging(value);
-					this.SendPropertyChanging();
-					this._TIMESTAMP = value;
-					this.SendPropertyChanged("TIMESTAMP");
-					this.OnTIMESTAMPChanged();
 				}
 			}
 		}
@@ -1258,8 +1162,6 @@ namespace Innova.LOGICA.BDD
 		
 		private int _DESCRIPCION;
 		
-		private System.Data.Linq.Binary _TIMESTAMPT;
-		
 		private EntityRef<PROYECTO> _PROYECTO;
 		
 		private EntityRef<ROLE> _ROLE;
@@ -1284,8 +1186,6 @@ namespace Innova.LOGICA.BDD
     partial void OnID_USUARIOChanged();
     partial void OnDESCRIPCIONChanging(int value);
     partial void OnDESCRIPCIONChanged();
-    partial void OnTIMESTAMPTChanging(System.Data.Linq.Binary value);
-    partial void OnTIMESTAMPTChanged();
     #endregion
 		
 		public EXP_EMPRENDEDORE()
@@ -1296,7 +1196,7 @@ namespace Innova.LOGICA.BDD
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_EXP_EMPRENDEDOR", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_EXP_EMPRENDEDOR", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int ID_EXP_EMPRENDEDOR
 		{
 			get
@@ -1316,7 +1216,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FECHA_INICIO", DbType="DateTime", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FECHA_INICIO", DbType="DateTime")]
 		public System.Nullable<System.DateTime> FECHA_INICIO
 		{
 			get
@@ -1336,7 +1236,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FECHA_TERMINO", DbType="DateTime", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FECHA_TERMINO", DbType="DateTime")]
 		public System.Nullable<System.DateTime> FECHA_TERMINO
 		{
 			get
@@ -1356,7 +1256,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_PROYECTO", DbType="Int", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_PROYECTO", DbType="Int")]
 		public System.Nullable<int> ID_PROYECTO
 		{
 			get
@@ -1380,7 +1280,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_ROL", DbType="Int", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_ROL", DbType="Int")]
 		public System.Nullable<int> ID_ROL
 		{
 			get
@@ -1404,7 +1304,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_USUARIO", DbType="Int", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_USUARIO", DbType="Int")]
 		public System.Nullable<int> ID_USUARIO
 		{
 			get
@@ -1428,7 +1328,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DESCRIPCION", DbType="Int NOT NULL", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DESCRIPCION", DbType="Int NOT NULL")]
 		public int DESCRIPCION
 		{
 			get
@@ -1444,26 +1344,6 @@ namespace Innova.LOGICA.BDD
 					this._DESCRIPCION = value;
 					this.SendPropertyChanged("DESCRIPCION");
 					this.OnDESCRIPCIONChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TIMESTAMPT", AutoSync=AutoSync.Always, DbType="rowversion", IsDbGenerated=true, IsVersion=true, UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary TIMESTAMPT
-		{
-			get
-			{
-				return this._TIMESTAMPT;
-			}
-			set
-			{
-				if ((this._TIMESTAMPT != value))
-				{
-					this.OnTIMESTAMPTChanging(value);
-					this.SendPropertyChanging();
-					this._TIMESTAMPT = value;
-					this.SendPropertyChanged("TIMESTAMPT");
-					this.OnTIMESTAMPTChanged();
 				}
 			}
 		}
@@ -2014,13 +1894,11 @@ namespace Innova.LOGICA.BDD
 		
 		private System.Nullable<int> _ID_HABLIIDADES;
 		
-		private System.Data.Linq.Binary _TIMESTAMPT;
-		
 		public HABILIDADES_USUARIO()
 		{
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_USUARIO", DbType="Int", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_USUARIO", DbType="Int")]
 		public System.Nullable<int> ID_USUARIO
 		{
 			get
@@ -2036,7 +1914,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_HABLIIDADES", DbType="Int", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_HABLIIDADES", DbType="Int")]
 		public System.Nullable<int> ID_HABLIIDADES
 		{
 			get
@@ -2048,22 +1926,6 @@ namespace Innova.LOGICA.BDD
 				if ((this._ID_HABLIIDADES != value))
 				{
 					this._ID_HABLIIDADES = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TIMESTAMPT", AutoSync=AutoSync.Always, DbType="rowversion", IsDbGenerated=true, IsVersion=true, UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary TIMESTAMPT
-		{
-			get
-			{
-				return this._TIMESTAMPT;
-			}
-			set
-			{
-				if ((this._TIMESTAMPT != value))
-				{
-					this._TIMESTAMPT = value;
 				}
 			}
 		}
@@ -2085,8 +1947,6 @@ namespace Innova.LOGICA.BDD
 		
 		private string _EMAIL;
 		
-		private System.Data.Linq.Binary _TIMESTAMP;
-		
 		private EntitySet<EXP_EDUCACIONALE> _EXP_EDUCACIONALEs;
 		
     #region Extensibility Method Definitions
@@ -2103,8 +1963,6 @@ namespace Innova.LOGICA.BDD
     partial void OnTELEFONOChanged();
     partial void OnEMAILChanging(string value);
     partial void OnEMAILChanged();
-    partial void OnTIMESTAMPChanging(System.Data.Linq.Binary value);
-    partial void OnTIMESTAMPChanged();
     #endregion
 		
 		public INSTITUCIONE()
@@ -2113,7 +1971,7 @@ namespace Innova.LOGICA.BDD
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_INSTITUCION", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_INSTITUCION", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int ID_INSTITUCION
 		{
 			get
@@ -2133,7 +1991,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE_INSTITUCION", DbType="VarChar(100)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE_INSTITUCION", DbType="VarChar(100)")]
 		public string NOMBRE_INSTITUCION
 		{
 			get
@@ -2153,7 +2011,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DIRECCION", DbType="VarChar(100)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DIRECCION", DbType="VarChar(100)")]
 		public string DIRECCION
 		{
 			get
@@ -2173,7 +2031,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TELEFONO", DbType="VarChar(50)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TELEFONO", DbType="VarChar(50)")]
 		public string TELEFONO
 		{
 			get
@@ -2193,7 +2051,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EMAIL", DbType="VarChar(100)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EMAIL", DbType="VarChar(100)")]
 		public string EMAIL
 		{
 			get
@@ -2209,26 +2067,6 @@ namespace Innova.LOGICA.BDD
 					this._EMAIL = value;
 					this.SendPropertyChanged("EMAIL");
 					this.OnEMAILChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TIMESTAMP", AutoSync=AutoSync.Always, DbType="rowversion", IsDbGenerated=true, IsVersion=true, UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary TIMESTAMP
-		{
-			get
-			{
-				return this._TIMESTAMP;
-			}
-			set
-			{
-				if ((this._TIMESTAMP != value))
-				{
-					this.OnTIMESTAMPChanging(value);
-					this.SendPropertyChanging();
-					this._TIMESTAMP = value;
-					this.SendPropertyChanged("TIMESTAMP");
-					this.OnTIMESTAMPChanged();
 				}
 			}
 		}
@@ -2650,8 +2488,6 @@ namespace Innova.LOGICA.BDD
 		
 		private string _NOMBRE_PROFESION;
 		
-		private System.Data.Linq.Binary _TIMESTAMP;
-		
 		private EntitySet<USUARIO> _USUARIOs;
 		
     #region Extensibility Method Definitions
@@ -2662,8 +2498,6 @@ namespace Innova.LOGICA.BDD
     partial void OnID_PROFESIONChanged();
     partial void OnNOMBRE_PROFESIONChanging(string value);
     partial void OnNOMBRE_PROFESIONChanged();
-    partial void OnTIMESTAMPChanging(System.Data.Linq.Binary value);
-    partial void OnTIMESTAMPChanged();
     #endregion
 		
 		public PROFESIONE()
@@ -2672,7 +2506,7 @@ namespace Innova.LOGICA.BDD
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_PROFESION", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_PROFESION", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int ID_PROFESION
 		{
 			get
@@ -2692,7 +2526,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE_PROFESION", DbType="VarChar(100)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE_PROFESION", DbType="VarChar(100)")]
 		public string NOMBRE_PROFESION
 		{
 			get
@@ -2708,26 +2542,6 @@ namespace Innova.LOGICA.BDD
 					this._NOMBRE_PROFESION = value;
 					this.SendPropertyChanged("NOMBRE_PROFESION");
 					this.OnNOMBRE_PROFESIONChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TIMESTAMP", AutoSync=AutoSync.Always, DbType="rowversion", IsDbGenerated=true, IsVersion=true, UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary TIMESTAMP
-		{
-			get
-			{
-				return this._TIMESTAMP;
-			}
-			set
-			{
-				if ((this._TIMESTAMP != value))
-				{
-					this.OnTIMESTAMPChanging(value);
-					this.SendPropertyChanging();
-					this._TIMESTAMP = value;
-					this.SendPropertyChanged("TIMESTAMP");
-					this.OnTIMESTAMPChanged();
 				}
 			}
 		}
@@ -2790,8 +2604,6 @@ namespace Innova.LOGICA.BDD
 		
 		private string _DESCRIPCION_PROYECTO;
 		
-		private System.Data.Linq.Binary _TIMESTAMP;
-		
 		private EntitySet<EXP_EMPRENDEDORE> _EXP_EMPRENDEDOREs;
 		
     #region Extensibility Method Definitions
@@ -2804,8 +2616,6 @@ namespace Innova.LOGICA.BDD
     partial void OnNOMBRE_PROYECTOChanged();
     partial void OnDESCRIPCION_PROYECTOChanging(string value);
     partial void OnDESCRIPCION_PROYECTOChanged();
-    partial void OnTIMESTAMPChanging(System.Data.Linq.Binary value);
-    partial void OnTIMESTAMPChanged();
     #endregion
 		
 		public PROYECTO()
@@ -2814,7 +2624,7 @@ namespace Innova.LOGICA.BDD
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_PROYECTO", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_PROYECTO", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int ID_PROYECTO
 		{
 			get
@@ -2834,7 +2644,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE_PROYECTO", DbType="VarChar(100)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE_PROYECTO", DbType="VarChar(100)")]
 		public string NOMBRE_PROYECTO
 		{
 			get
@@ -2854,7 +2664,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DESCRIPCION_PROYECTO", DbType="VarChar(MAX)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DESCRIPCION_PROYECTO", DbType="VarChar(MAX)")]
 		public string DESCRIPCION_PROYECTO
 		{
 			get
@@ -2870,26 +2680,6 @@ namespace Innova.LOGICA.BDD
 					this._DESCRIPCION_PROYECTO = value;
 					this.SendPropertyChanged("DESCRIPCION_PROYECTO");
 					this.OnDESCRIPCION_PROYECTOChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TIMESTAMP", AutoSync=AutoSync.Always, DbType="rowversion", IsDbGenerated=true, IsVersion=true, UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary TIMESTAMP
-		{
-			get
-			{
-				return this._TIMESTAMP;
-			}
-			set
-			{
-				if ((this._TIMESTAMP != value))
-				{
-					this.OnTIMESTAMPChanging(value);
-					this.SendPropertyChanging();
-					this._TIMESTAMP = value;
-					this.SendPropertyChanged("TIMESTAMP");
-					this.OnTIMESTAMPChanged();
 				}
 			}
 		}
@@ -2952,8 +2742,6 @@ namespace Innova.LOGICA.BDD
 		
 		private string _DESCRIPCION;
 		
-		private System.Data.Linq.Binary _TIMESTAMP;
-		
 		private EntitySet<EXP_EMPRENDEDORE> _EXP_EMPRENDEDOREs;
 		
 		private EntitySet<EXP_LABORALE> _EXP_LABORALEs;
@@ -2968,8 +2756,6 @@ namespace Innova.LOGICA.BDD
     partial void OnNOMBRE_ROLChanged();
     partial void OnDESCRIPCIONChanging(string value);
     partial void OnDESCRIPCIONChanged();
-    partial void OnTIMESTAMPChanging(System.Data.Linq.Binary value);
-    partial void OnTIMESTAMPChanged();
     #endregion
 		
 		public ROLE()
@@ -2979,7 +2765,7 @@ namespace Innova.LOGICA.BDD
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_ROL", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_ROL", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int ID_ROL
 		{
 			get
@@ -2999,7 +2785,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE_ROL", DbType="VarChar(100)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE_ROL", DbType="VarChar(100)")]
 		public string NOMBRE_ROL
 		{
 			get
@@ -3019,7 +2805,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DESCRIPCION", DbType="VarChar(100)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DESCRIPCION", DbType="VarChar(100)")]
 		public string DESCRIPCION
 		{
 			get
@@ -3035,26 +2821,6 @@ namespace Innova.LOGICA.BDD
 					this._DESCRIPCION = value;
 					this.SendPropertyChanged("DESCRIPCION");
 					this.OnDESCRIPCIONChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TIMESTAMP", AutoSync=AutoSync.Always, DbType="rowversion", IsDbGenerated=true, IsVersion=true, UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary TIMESTAMP
-		{
-			get
-			{
-				return this._TIMESTAMP;
-			}
-			set
-			{
-				if ((this._TIMESTAMP != value))
-				{
-					this.OnTIMESTAMPChanging(value);
-					this.SendPropertyChanging();
-					this._TIMESTAMP = value;
-					this.SendPropertyChanged("TIMESTAMP");
-					this.OnTIMESTAMPChanged();
 				}
 			}
 		}
@@ -3158,8 +2924,6 @@ namespace Innova.LOGICA.BDD
 		
 		private System.Nullable<int> _ID_PROFESION;
 		
-		private System.Data.Linq.Binary _TIMESTAMP;
-		
 		private EntitySet<COMENTARIO> _COMENTARIOs;
 		
 		private EntitySet<COMENTARIO> _COMENTARIOs1;
@@ -3198,8 +2962,6 @@ namespace Innova.LOGICA.BDD
     partial void OnPASSWORDChanged();
     partial void OnID_PROFESIONChanging(System.Nullable<int> value);
     partial void OnID_PROFESIONChanged();
-    partial void OnTIMESTAMPChanging(System.Data.Linq.Binary value);
-    partial void OnTIMESTAMPChanged();
     #endregion
 		
 		public USUARIO()
@@ -3213,7 +2975,7 @@ namespace Innova.LOGICA.BDD
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_USUARIO", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true, UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_USUARIO", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int ID_USUARIO
 		{
 			get
@@ -3233,7 +2995,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE", DbType="VarChar(100)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE", DbType="VarChar(100)")]
 		public string NOMBRE
 		{
 			get
@@ -3253,7 +3015,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_APELLIDO_PATERNO", DbType="VarChar(100)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_APELLIDO_PATERNO", DbType="VarChar(100)")]
 		public string APELLIDO_PATERNO
 		{
 			get
@@ -3273,7 +3035,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_APELLIDO_MATERNO", DbType="VarChar(100)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_APELLIDO_MATERNO", DbType="VarChar(100)")]
 		public string APELLIDO_MATERNO
 		{
 			get
@@ -3293,7 +3055,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FECHA_NACIMIENTO", DbType="VarChar(50)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FECHA_NACIMIENTO", DbType="VarChar(50)")]
 		public string FECHA_NACIMIENTO
 		{
 			get
@@ -3313,7 +3075,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EMAIL", DbType="VarChar(100)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EMAIL", DbType="VarChar(100)")]
 		public string EMAIL
 		{
 			get
@@ -3333,7 +3095,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TELEFONO_PERSONAL", DbType="VarChar(100)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TELEFONO_PERSONAL", DbType="VarChar(100)")]
 		public string TELEFONO_PERSONAL
 		{
 			get
@@ -3353,7 +3115,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TELEFONO_CELULAR", DbType="VarChar(100)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TELEFONO_CELULAR", DbType="VarChar(100)")]
 		public string TELEFONO_CELULAR
 		{
 			get
@@ -3373,7 +3135,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="USUARIO", Storage="_USUARIO1", DbType="VarChar(100)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="USUARIO", Storage="_USUARIO1", DbType="VarChar(100)")]
 		public string USUARIO1
 		{
 			get
@@ -3393,7 +3155,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PASSWORD", DbType="VarChar(100)", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PASSWORD", DbType="VarChar(100)")]
 		public string PASSWORD
 		{
 			get
@@ -3413,7 +3175,7 @@ namespace Innova.LOGICA.BDD
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_PROFESION", DbType="Int", UpdateCheck=UpdateCheck.Never)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_PROFESION", DbType="Int")]
 		public System.Nullable<int> ID_PROFESION
 		{
 			get
@@ -3433,26 +3195,6 @@ namespace Innova.LOGICA.BDD
 					this._ID_PROFESION = value;
 					this.SendPropertyChanged("ID_PROFESION");
 					this.OnID_PROFESIONChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TIMESTAMP", AutoSync=AutoSync.Always, DbType="rowversion", IsDbGenerated=true, IsVersion=true, UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary TIMESTAMP
-		{
-			get
-			{
-				return this._TIMESTAMP;
-			}
-			set
-			{
-				if ((this._TIMESTAMP != value))
-				{
-					this.OnTIMESTAMPChanging(value);
-					this.SendPropertyChanging();
-					this._TIMESTAMP = value;
-					this.SendPropertyChanged("TIMESTAMP");
-					this.OnTIMESTAMPChanged();
 				}
 			}
 		}
