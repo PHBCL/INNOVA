@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Innova" Class="InnovaDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=(local);Initial Catalog=Innova;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="InnovaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.COMENTARIOS" Member="COMENTARIOs">
+    <Type Name="COMENTARIO">
+      <Column Name="ID_COMENTARIO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_USUARIO_EMISOR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_USUARIO_RECEPTOR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="COMENTARIO_CORTA" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="COMENTARIO_LARGO" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="ID_VALORACION" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FECHA_INGRESO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TIMESTAMP" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="VALORACIONE_COMENTARIO" Member="VALORACIONE" ThisKey="ID_VALORACION" OtherKey="ID_VALORACION" Type="VALORACIONE" IsForeignKey="true" />
+      <Association Name="USUARIO_COMENTARIO" Member="USUARIO" ThisKey="ID_USUARIO_EMISOR" OtherKey="ID_USUARIO" Type="USUARIO" IsForeignKey="true" />
+      <Association Name="USUARIO_COMENTARIO1" Member="USUARIO1" ThisKey="ID_USUARIO_RECEPTOR" OtherKey="ID_USUARIO" Type="USUARIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VALORACIONES" Member="VALORACIONEs">
+    <Type Name="VALORACIONE">
+      <Column Name="ID_VALORACION" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="VALORACION" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TIMESTAMP" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="VALORACIONE_COMENTARIO" Member="COMENTARIOs" ThisKey="ID_VALORACION" OtherKey="ID_VALORACION" Type="COMENTARIO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EMPRESAS" Member="EMPRESAs">
+    <Type Name="EMPRESA">
+      <Column Name="ID_EMPRESA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DIRECCION" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TELEFONO" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TIMESTAMP" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="EMPRESA_EXP_LABORALE" Member="EXP_LABORALEs" ThisKey="ID_EMPRESA" OtherKey="ID_EMPRESA" Type="EXP_LABORALE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EXP_EDUCACIONALES" Member="EXP_EDUCACIONALEs">
+    <Type Name="EXP_EDUCACIONALE">
+      <Column Name="ID_EXP_EDUCACION" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FECHA_INICIO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FECHA_TERMINO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ID_INSTITUCION" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_USUARIO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="TIMESTAMP" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="INSTITUCIONE_EXP_EDUCACIONALE" Member="INSTITUCIONE" ThisKey="ID_INSTITUCION" OtherKey="ID_INSTITUCION" Type="INSTITUCIONE" IsForeignKey="true" />
+      <Association Name="USUARIO_EXP_EDUCACIONALE" Member="USUARIO" ThisKey="ID_USUARIO" OtherKey="ID_USUARIO" Type="USUARIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EXP_EMPRENDEDORES" Member="EXP_EMPRENDEDOREs">
+    <Type Name="EXP_EMPRENDEDORE">
+      <Column Name="ID_EXP_EMPRENDEDOR" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FECHA_INICIO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FECHA_TERMINO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ID_PROYECTO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_ROL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_USUARIO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DESCRIPCION" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TIMESTAMPT" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="PROYECTO_EXP_EMPRENDEDORE" Member="PROYECTO" ThisKey="ID_PROYECTO" OtherKey="ID_PROYECTO" Type="PROYECTO" IsForeignKey="true" />
+      <Association Name="ROLE_EXP_EMPRENDEDORE" Member="ROLE" ThisKey="ID_ROL" OtherKey="ID_ROL" Type="ROLE" IsForeignKey="true" />
+      <Association Name="USUARIO_EXP_EMPRENDEDORE" Member="USUARIO" ThisKey="ID_USUARIO" OtherKey="ID_USUARIO" Type="USUARIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EXP_LABORALES" Member="EXP_LABORALEs">
+    <Type Name="EXP_LABORALE">
+      <Column Name="ID_EXP_LABORAL" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID_ROL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FECHA_INICIO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FECHA_TERMINO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ID_EMPRESA" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="EMPRESA_EXP_LABORALE" Member="EMPRESA" ThisKey="ID_EMPRESA" OtherKey="ID_EMPRESA" Type="EMPRESA" IsForeignKey="true" />
+      <Association Name="ROLE_EXP_LABORALE" Member="ROLE" ThisKey="ID_ROL" OtherKey="ID_ROL" Type="ROLE" IsForeignKey="true" />
+      <Association Name="USUARIO_EXP_LABORALE" Member="USUARIO" ThisKey="ID_EXP_LABORAL" OtherKey="ID_USUARIO" Type="USUARIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HABILIDADES" Member="HABILIDADEs">
+    <Type Name="HABILIDADE">
+      <Column Name="ID_HABILIDAD" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBRE_HABLIDIDAD" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="TIMESTAMP" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="HABILIDADE_HABILIDADES_USUARIO" Member="HABILIDADES_USUARIOs" ThisKey="ID_HABILIDAD" OtherKey="ID_HABLIIDADES" Type="HABILIDADES_USUARIO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HABILIDADES_USUARIOS" Member="HABILIDADES_USUARIOs">
+    <Type Name="HABILIDADES_USUARIO">
+      <Column Name="ID_USUARIO" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_HABLIIDADES" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TIMESTAMPT" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="HABILIDADE_HABILIDADES_USUARIO" Member="HABILIDADE" ThisKey="ID_HABLIIDADES" OtherKey="ID_HABILIDAD" Type="HABILIDADE" IsForeignKey="true" />
+      <Association Name="USUARIO_HABILIDADES_USUARIO" Member="USUARIO" ThisKey="ID_USUARIO" OtherKey="ID_USUARIO" Type="USUARIO" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.INSTITUCIONES" Member="INSTITUCIONEs">
+    <Type Name="INSTITUCIONE">
+      <Column Name="ID_INSTITUCION" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBRE_INSTITUCION" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DIRECCION" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TELEFONO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TIMESTAMP" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="INSTITUCIONE_EXP_EDUCACIONALE" Member="EXP_EDUCACIONALEs" ThisKey="ID_INSTITUCION" OtherKey="ID_INSTITUCION" Type="EXP_EDUCACIONALE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LOG_ERRORES" Member="LOG_ERROREs">
+    <Type Name="LOG_ERRORE">
+      <Column Name="ID_LOG" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ID_NIVEL_ERROR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FECHA_INGRESO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TIMESTAMP" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="NIVEL_ERRORE_LOG_ERRORE" Member="NIVEL_ERRORE" ThisKey="ID_NIVEL_ERROR" OtherKey="ID_NIVEL_ERROR" Type="NIVEL_ERRORE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NIVEL_ERRORES" Member="NIVEL_ERROREs">
+    <Type Name="NIVEL_ERRORE">
+      <Column Name="ID_NIVEL_ERROR" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NIVEL" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TIMESTAMP" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="NIVEL_ERRORE_LOG_ERRORE" Member="LOG_ERROREs" ThisKey="ID_NIVEL_ERROR" OtherKey="ID_NIVEL_ERROR" Type="LOG_ERRORE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PROFESIONES" Member="PROFESIONEs">
+    <Type Name="PROFESIONE">
+      <Column Name="ID_PROFESION" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBRE_PROFESION" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TIMESTAMP" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="PROFESIONE_USUARIO" Member="USUARIOs" ThisKey="ID_PROFESION" OtherKey="ID_PROFESION" Type="USUARIO" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PROYECTOS" Member="PROYECTOs">
+    <Type Name="PROYECTO">
+      <Column Name="ID_PROYECTO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBRE_PROYECTO" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DESCRIPCION_PROYECTO" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="TIMESTAMP" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="PROYECTO_EXP_EMPRENDEDORE" Member="EXP_EMPRENDEDOREs" ThisKey="ID_PROYECTO" OtherKey="ID_PROYECTO" Type="EXP_EMPRENDEDORE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ROLES" Member="ROLEs">
+    <Type Name="ROLE">
+      <Column Name="ID_ROL" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBRE_ROL" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DESCRIPCION" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TIMESTAMP" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="ROLE_EXP_EMPRENDEDORE" Member="EXP_EMPRENDEDOREs" ThisKey="ID_ROL" OtherKey="ID_ROL" Type="EXP_EMPRENDEDORE" />
+      <Association Name="ROLE_EXP_LABORALE" Member="EXP_LABORALEs" ThisKey="ID_ROL" OtherKey="ID_ROL" Type="EXP_LABORALE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.USUARIOS" Member="USUARIOs">
+    <Type Name="USUARIO">
+      <Column Name="ID_USUARIO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NOMBRE" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="APELLIDO_PATERNO" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="APELLIDO_MATERNO" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="FECHA_NACIMIENTO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="EMAIL" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TELEFONO_PERSONAL" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TELEFONO_CELULAR" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="USUARIO" Member="USUARIO1" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PASSWORD" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ID_PROFESION" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TIMESTAMP" Type="System.Data.Linq.Binary" DbType="rowversion" CanBeNull="true" IsVersion="true" />
+      <Association Name="USUARIO_COMENTARIO" Member="COMENTARIOs" ThisKey="ID_USUARIO" OtherKey="ID_USUARIO_EMISOR" Type="COMENTARIO" />
+      <Association Name="USUARIO_COMENTARIO1" Member="COMENTARIOs1" ThisKey="ID_USUARIO" OtherKey="ID_USUARIO_RECEPTOR" Type="COMENTARIO" />
+      <Association Name="USUARIO_EXP_EDUCACIONALE" Member="EXP_EDUCACIONALEs" ThisKey="ID_USUARIO" OtherKey="ID_USUARIO" Type="EXP_EDUCACIONALE" />
+      <Association Name="USUARIO_EXP_EMPRENDEDORE" Member="EXP_EMPRENDEDOREs" ThisKey="ID_USUARIO" OtherKey="ID_USUARIO" Type="EXP_EMPRENDEDORE" />
+      <Association Name="USUARIO_EXP_LABORALE" Member="EXP_LABORALE" ThisKey="ID_USUARIO" OtherKey="ID_EXP_LABORAL" Type="EXP_LABORALE" Cardinality="One" />
+      <Association Name="USUARIO_HABILIDADES_USUARIO" Member="HABILIDADES_USUARIOs" ThisKey="ID_USUARIO" OtherKey="ID_USUARIO" Type="HABILIDADES_USUARIO" />
+      <Association Name="PROFESIONE_USUARIO" Member="PROFESIONE" ThisKey="ID_PROFESION" OtherKey="ID_PROFESION" Type="PROFESIONE" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
