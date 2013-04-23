@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Innova" Class="InnovaDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="WebSettings" ConnectionString="Data Source=(local);Initial Catalog=Innova;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="InnovaConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="WebSettings" ConnectionString="Data Source=142.4.63.134,8888;Initial Catalog=Innova;Persist Security Info=True;User ID=innova" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="InnovaConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.COMENTARIOS" Member="COMENTARIOs">
     <Type Name="COMENTARIO">
       <Column Name="ID_COMENTARIO" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -160,6 +160,16 @@
       <Association Name="USUARIO_EXP_LABORALE" Member="EXP_LABORALE" ThisKey="ID_USUARIO" OtherKey="ID_EXP_LABORAL" Type="EXP_LABORALE" Cardinality="One" />
       <Association Name="USUARIO_HABILIDADES_USUARIO" Member="HABILIDADES_USUARIOs" ThisKey="ID_USUARIO" OtherKey="ID_USUARIO" Type="HABILIDADES_USUARIO" />
       <Association Name="PROFESIONE_USUARIO" Member="PROFESIONE" ThisKey="ID_PROFESION" OtherKey="ID_PROFESION" Type="PROFESIONE" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="innova.MENSAJES" Member="MENSAJEs">
+    <Type Name="MENSAJE">
+      <Column Name="ID_MENSAJE" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ASUNTO" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MENSAJE" Member="MENSAJE1" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="FECHA_ENVIO" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ID_EMISOR" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ID_RECEPTOR" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

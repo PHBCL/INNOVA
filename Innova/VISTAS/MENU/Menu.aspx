@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Menu.aspx.cs" Inherits="Innova.VISTAS.MENU.Menu" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="menu.aspx.cs" Inherits="Innova.VISTAS.MENU.Menu" %>
 
 <!DOCTYPE html>
 <html lang="">
@@ -9,34 +9,15 @@
 	<meta name="keywords" content="" />
 	<meta name="robots" content="" />
 	<link type="text/css" rel="stylesheet" href="../../css/menu/style.css" media="all" />
+    <script src="../../js/actions/jsMenu.js"></script>
 </head>
-<body>
-  <script type="text/javascript">
-      var contenidoAnterior = "bienvenida";
-      function cambiarContenido(contenidoVer)
-      {   
-          document.getElementById(contenidoAnterior).style.display = "none";
-          contenidoAnterior = contenidoVer;
-          document.getElementById(contenidoAnterior).style.display = "block";
-      }
-
-
-  </script>
+<body onload="ObtenerDatos();">
   <div class="sidebar">
 	<div class="search">
 	    <font color="white">Bienvenido : [USUARIO]</font> 
 	</div>
-	<ul>
-		<li><a href="#" onclick="cambiarContenido('misIdead');">Mis Ideas</a></li>
-		<li><a href="#" onclick="cambiarContenido('postulaciones');">Postulaciones</a></li>
-		<li>
-			<a href="#">Mensajes <span class="pip">12</span></a>			
-			<ul class="submenu">
-				<li><a href="#" onclick="cambiarContenido();">Inbox</a></li>
-				<li><a href="#" onclick="cambiarContenido();">Mensajes Eliminados</a></li>
-			</ul>
-		</li>
-		<li><a href="#" onclick="cambiarContenido('configuracion');">Configuracion</a></li>
+	<ul id="menu">
+		
 	</ul>
 </div>
 

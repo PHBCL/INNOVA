@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Innova.LOGICA.BDD
+namespace Innova.logica.bdd
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;
@@ -75,7 +75,7 @@ namespace Innova.LOGICA.BDD
     #endregion
 		
 		public InnovaDataClassesDataContext() : 
-				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["InnovaConnectionString"].ConnectionString, mappingSource)
+				base(global::System.Configuration.ConfigurationManager.ConnectionStrings["InnovaConnectionString1"].ConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -221,6 +221,14 @@ namespace Innova.LOGICA.BDD
 			get
 			{
 				return this.GetTable<USUARIO>();
+			}
+		}
+		
+		public System.Data.Linq.Table<MENSAJE> MENSAJEs
+		{
+			get
+			{
+				return this.GetTable<MENSAJE>();
 			}
 		}
 	}
@@ -3380,6 +3388,123 @@ namespace Innova.LOGICA.BDD
 		{
 			this.SendPropertyChanging();
 			entity.USUARIO = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="innova.MENSAJES")]
+	public partial class MENSAJE
+	{
+		
+		private System.Nullable<int> _ID_MENSAJE;
+		
+		private string _ASUNTO;
+		
+		private string _MENSAJE1;
+		
+		private System.Nullable<System.DateTime> _FECHA_ENVIO;
+		
+		private System.Nullable<int> _ID_EMISOR;
+		
+		private System.Nullable<int> _ID_RECEPTOR;
+		
+		public MENSAJE()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_MENSAJE", DbType="Int")]
+		public System.Nullable<int> ID_MENSAJE
+		{
+			get
+			{
+				return this._ID_MENSAJE;
+			}
+			set
+			{
+				if ((this._ID_MENSAJE != value))
+				{
+					this._ID_MENSAJE = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ASUNTO", DbType="VarChar(50)")]
+		public string ASUNTO
+		{
+			get
+			{
+				return this._ASUNTO;
+			}
+			set
+			{
+				if ((this._ASUNTO != value))
+				{
+					this._ASUNTO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="MENSAJE", Storage="_MENSAJE1", DbType="VarChar(MAX)")]
+		public string MENSAJE1
+		{
+			get
+			{
+				return this._MENSAJE1;
+			}
+			set
+			{
+				if ((this._MENSAJE1 != value))
+				{
+					this._MENSAJE1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FECHA_ENVIO", DbType="DateTime")]
+		public System.Nullable<System.DateTime> FECHA_ENVIO
+		{
+			get
+			{
+				return this._FECHA_ENVIO;
+			}
+			set
+			{
+				if ((this._FECHA_ENVIO != value))
+				{
+					this._FECHA_ENVIO = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_EMISOR", DbType="Int")]
+		public System.Nullable<int> ID_EMISOR
+		{
+			get
+			{
+				return this._ID_EMISOR;
+			}
+			set
+			{
+				if ((this._ID_EMISOR != value))
+				{
+					this._ID_EMISOR = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_RECEPTOR", DbType="Int")]
+		public System.Nullable<int> ID_RECEPTOR
+		{
+			get
+			{
+				return this._ID_RECEPTOR;
+			}
+			set
+			{
+				if ((this._ID_RECEPTOR != value))
+				{
+					this._ID_RECEPTOR = value;
+				}
+			}
 		}
 	}
 }

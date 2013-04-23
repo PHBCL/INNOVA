@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using Innova.DTO;
-using Innova.LOGICA.BDD;
+using Innova.logica.bdd;
 
 namespace Innova.DAO
 {

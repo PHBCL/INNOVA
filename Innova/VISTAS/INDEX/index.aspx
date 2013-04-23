@@ -9,18 +9,24 @@
     <script type="text/javascript">
         function realizarLogin()
         {
-            $(document).ready(function () {
                 $.ajax({
                     type: "POST",
-                    url: "/SERVICIOS/ServicioLogin.asmx/Login",
+                    url: "/servicios/ServicioLogin.asmx/Login",
                     data: '{"usuario":"' + document.getElementById('txtNombre').value + '","password":"' + document.getElementById('txtPassword').value + '"}',
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
-                    success: function (msg) {
-                        
+                    success: function (msg)
+                    {
+                        if (msg.d._usuario != null && msg.d._password)
+                        {
+                            window.location.href = "../MENU/Menu.aspx";
+                        }
+                        else
+                        {
+                            alert("Usuario No existe");
+                        }
                     }
                 });
-            });
         }
     </script>
 </head>

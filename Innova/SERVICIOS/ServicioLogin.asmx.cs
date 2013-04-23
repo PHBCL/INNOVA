@@ -1,6 +1,6 @@
 ﻿using Innova.DAO;
 using Innova.DTO;
-using Innova.LOGICA.BDD;
+using Innova.logica.bdd;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +22,7 @@ namespace Innova.SERVICIOS
     public class ServicioLogin1 : System.Web.Services.WebService
     {
 
-        [WebMethod]
+        [WebMethod(EnableSession=true)]
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
         public UsuarioDTO Login(string usuario, string password)
         {   
@@ -30,7 +30,12 @@ namespace Innova.SERVICIOS
             {
                 UsuarioDTO usuarioRegistrar = new UsuarioDTO(usuario, password);
                 LoginDAO usuarioDAO = new LoginDAO();
-                return usuarioDAO.ValidarUsuario(usuarioRegistrar);
+                UsuarioDTO respuestaValidacion = usuarioDAO.ValidarUsuario(usuarioRegistrar);
+                if (respuestaValidacion != null)
+                {
+                    Session["usuario"] = respuestaValidacion._usuario;
+                }
+                return respuestaValidacion;
             }
             catch (Exception ex)
             {
