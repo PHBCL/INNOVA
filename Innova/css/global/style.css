@@ -29,69 +29,26 @@
 #header {
 	width:1100px;
 	background-image:url(../../imagenes/global/header.jpg);
-	height: 155px;	
+	height: 80px;	
 }
 
 #logo {
-	width:262px;
-	height: 87px;
-	margin: 20px 0 0 20px;
+	width:240px;
+	height: 47px;
+	margin: 10px 0 0 20px;
 	border:1px solid green;	
 	float:left;
 }
 
 #contenedor-registro {
-	width: 420px;
-	height: 120px;
-	border:1px solid green;
-	float: right;
-	margin-top:5px;
-}
-#login {
-	width: 380px;
-	height: 30px;
-	border:1px solid green;
-	float: right;
-}
-#registro {
-	width:320px;
-	height: 35px;
-	float: right;
-	margin-top:5px;
-	border:1px solid orange
-}
-#no-registrado {
-	width: 150px;
-	height: 30px;
-	float: right;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	background-color:#2f3439
-}
-#registrate {
-	width: 150px;
-	height: 30px;
-	float: right;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	margin-right:8px;
-	background-color:#2f3439
-}
-#btn-ingresar{
-	width: 20px;
-	height: 20px;
-	float: right;
-	
-}
-#login-facebook {
 	width: 250px;
-	height: 30px;
+	height: 50px;
 	border:1px solid green;
 	float: right;
-	margin-top:5px;
+    margin:10px 0 0 20px;
+    margin-right:10px;
 }
+
 #separador-header {
 	width: 372px;
 	background-image:url(../../imagenes/global/separador-header.png);
@@ -339,7 +296,7 @@
 #footer {
 	width: 100%;
 	background-color:#5d676f;
-	height:150px;
+	height:200px;
 	padding-top:30px
 }
 #footer a:link{
