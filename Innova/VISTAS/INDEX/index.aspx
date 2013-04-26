@@ -32,8 +32,10 @@
                               <button class="btn">Crear cuenta en IN</button>
                               <button class="btn">Login</button>
                             </div>
-                        </div><!-- #fin contenedor registro -->
-                </div><!-- #fin header -->
+                        </div>
+                       <!-- #fin contenedor registro -->
+                </div>
+                <!-- #fin header -->
                 
                 <div id="menu">
                 Home      | Sobre Wardrobe  | Cómo Funciona   |  A Quién Está Dirigido  |  FAQs

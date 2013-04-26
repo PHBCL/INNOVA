@@ -66,6 +66,8 @@
   <ItemGroup>
     <Content Include="css\global\bootstrap.min.css" />
     <Content Include="css\global\style.css" />
+    <Content Include="css\login\summer.theme-ie.css" />
+    <Content Include="css\login\summer.theme.css" />
     <Content Include="css\menu\style.css" />
     <Content Include="css\royalslider\royalslider.css" />
     <Content Include="css\royalslider\rs-minimal-white.css" />
@@ -87,6 +89,16 @@
     <Content Include="imagenes\global\tb.png" />
     <Content Include="imagenes\global\tw.png" />
     <Content Include="imagenes\global\ver-wardrobe.png" />
+    <Content Include="imagenes\login\135817043error-alt.png" />
+    <Content Include="imagenes\login\blank.png" />
+    <Content Include="imagenes\login\checkbox.png" />
+    <Content Include="imagenes\login\creampaper.png" />
+    <Content Include="imagenes\login\debut_dark.png" />
+    <Content Include="imagenes\login\facebook-light-grey.png" />
+    <Content Include="imagenes\login\google-light-grey.png" />
+    <Content Include="imagenes\login\linkedin-light-grey.png" />
+    <Content Include="imagenes\login\lock.png" />
+    <Content Include="imagenes\login\twitter-light-grey.png" />
     <Content Include="imagenes\menu\iconDashboard.png" />
     <Content Include="imagenes\menu\iconHistory.png" />
     <Content Include="imagenes\menu\iconMedia.png" />
@@ -106,6 +118,9 @@
     <Content Include="js\actions\jsMenu.js" />
     <Content Include="js\global\bootstrap.min.js" />
     <Content Include="js\global\jquery-1.8.3.min.js" />
+    <Content Include="js\login\libs\bootstrap.js" />
+    <Content Include="js\login\libs\css3-mediaqueries.js" />
+    <Content Include="js\login\onp.plugins.min.js" />
     <Content Include="js\menu\custom.js" />
     <Content Include="js\royalslider\jquery.easing-1.3.js" />
     <Content Include="js\royalslider\jquery.royalslider.min.js" />
