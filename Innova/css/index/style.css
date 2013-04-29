@@ -35,7 +35,7 @@ a{
 	width: 100%;
 	top: 0;
 	left: 0;
-	background-image:url(../images/website_bg_tile.gif);
+	background-image:url(../../imagenes/index/carrousel/website_bg_tile.gif);
 	text-align: center;
 	font-size: 12px;
 	line-height: 20px;
@@ -57,7 +57,7 @@ a{
 	width: 100%;
 	top: 600px;
 	left: 0;
-	background-image:url(../images/website_bg_tile_dark.gif);
+	background-image:url(../../imagenes/index/carrousel/website_bg_tile_dark.gif);
 	text-align: center;
 	font-size: 12px;
 	line-height: 20px;
@@ -85,7 +85,7 @@ a{
 	width:980px;
 	height:400px;
 	margin:auto;
-	margin-top:50px;	
+	margin-top:20px;	
 }
 
 .example-wrapper2{

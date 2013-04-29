@@ -24,8 +24,6 @@ jQuery(document).ready(function ($) {
     });
 });
 
-
-
 var tpj = jQuery;
 tpj.noConflict();
 tpj(document).ready(function() {
@@ -35,11 +33,11 @@ tpj(document).ready(function() {
     tpj('#services-example-1').services(
         {
             width:920,
-            height:290,
+            height:490,
             slideAmount:5,
             slideSpacing:30,
             carousel:"off",
-            touchenabled:"on",
+            touchenabled:"off",
             mouseWheel:"on",
             hoverAlpha:"off",			// Turns Alpha Fade on/off by Hovering
             slideshow:0,				// 0 = No SlideShow, 1000 = 1 sec Slideshow (rotating automatically)

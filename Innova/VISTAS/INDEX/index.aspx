@@ -2,19 +2,21 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <link href='http://fonts.googleapis.com/css?family=Carrois+Gothic|Oswald' rel='stylesheet' type='text/css' />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>IN</title>
-    <script type="text/javascript"  src="../../js/global/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript"  src="../../js/royalslider/jquery.royalslider.min.js"></script>
-    <script type="text/javascript" src="../../js/royalslider/jquery.easing-1.3.js"></script>
-    <script type="text/javascript"  src="../../js/actions/jsIndex.js"></script>
-    <script type="text/javascript"  src="../../js/global/bootstrap.min.js"></script>
-    <script type="text/javascript" src="../../js/global/menu/megamenu_plugins.js"></script>
-    <script type="text/javascript" src="../../js/global/menu/megamenu.min.js"></script>
-    <script type="text/javascript" src="../../js/index/jquery.cssAnimate.mini.js"></script>
-    <script>
-        $(document).ready(function ($) {
+     <link href='http://fonts.googleapis.com/css?family=Carrois+Gothic|Oswald' rel='stylesheet' type='text/css' />
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <title>IN</title>
+     <script type="text/javascript"  src="../../js/global/jquery-1.8.3.min.js"></script>
+     <script type="text/javascript"  src="../../js/royalslider/jquery.royalslider.min.js"></script>
+     <script type="text/javascript" src="../../js/royalslider/jquery.easing-1.3.js"></script>
+     <script type="text/javascript"  src="../../js/actions/jsIndex.js"></script>
+     <script type="text/javascript"  src="../../js/global/bootstrap.min.js"></script>
+     <script type="text/javascript" src="../../js/global/menu/megamenu_plugins.js"></script>
+     <script type="text/javascript" src="../../js/global/menu/megamenu.min.js"></script>
+     <script type="text/javascript" src="../../js/index/jquery.cssAnimate.mini.js"></script>
+     <script type="text/javascript" src="../../js/global/fancybox/jquery.fancybox.pack.js?v=2.1.4"></script>
+     <script type="text/javascript" src="../../js/global/fancybox/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+     <script>
+         tpj(document).ready(function ($) {
             $('.megamenu').megaMenuCompleteSet({
                 menu_speed_show: 300, // Time (in milliseconds) to show a drop down
                 menu_speed_hide: 200, // Time (in milliseconds) to hide a drop down
@@ -26,73 +28,16 @@
             });
         });
     </script>
-     <script type="text/javascript" src="../../js/index/jquery.mousewheel.js"></script>
-     <script type="text/javascript" src="../../js/index/jquery.thumbGallery.min.js"></script>
+    <script type="text/javascript" src="../../js/index/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="../../js/index/jquery.thumbGallery.min.js"></script>
     <script type="text/javascript" src="../../js/index/jquery.themepunch.services.min.js"></script>
-     <script type="text/javascript">
-
-          function thumbGallerySetupDone() {
-              //function called when component is ready to receive public function calls
-              //console.log('thumbGallerySetupDone');
-          }
-
-          function detailActivated() {
-              //function called when prettyphoto is opened
-              //console.log('detailActivated');
-          }
-
-          function detailClosed() {
-              //function called when prettyphoto is closed
-              //console.log('detailClosed');
-          }
-
-          function overThumb(i, j) {
-              //function called when mouse over thumb holder (plus returned item number: i = first level, j = second level)
-              //console.log('overThumb: ', i,' , ', j);
-          }
-
-          function outThumb(i, j) {
-              //function called when mouse out thumb holder (plus returned item number: i = first level, j = second level)
-              //console.log('outThumb: ', i,' , ', j);
-          }
-
-          jQuery(document).ready(function ($) {
-              $('#componentWrapper').thumbGallery({
-                  /* GENERAL */
-                  /*layoutType: grid/line */
-                  layoutType: 'grid',
-                  /*thumbOrientation: horizontal/vertical */
-                  thumbOrientation: 'horizontal',
-                  /*moveType: scroll/buttons */
-                  moveType: 'buttons',
-                  /*scrollOffset: how much to move scrollbar and scrolltrack off the content (enter 0 or above) */
-                  scrollOffset: 25,
-
-                  /* GRID SETTINGS */
-                  /*verticalSpacing:  */
-                  verticalSpacing: 10,
-                  /*horizontalSpacing:  */
-                  horizontalSpacing: 10,
-                  /*buttonSpacing: button spacing from the grid itself */
-                  buttonSpacing: 10,
-                  /*direction: left2right/top2bottom (direction in which boxes are listed) */
-                  direction: 'left2right',
-
-                  /* INNER SLIDESHOW */
-                  /*innerSlideshowDelay: slideshow delay for inner items in seconds, random value between: 'min, max', 
-                  enter both number the same for equal time delay like for example 2 seconds: '2,2' */
-                  innerSlideshowDelay: [2, 4],
-                  /*innerSlideshowOn: autoplay inner slideshow, true/false */
-                  innerSlideshowOn: true
-              });
-
-              jQuery("a[data-rel^='prettyPhoto']").prettyPhoto({
-                  theme: 'pp_default',
-                  deeplinking: false,
-                  callback: function () { detailClosed(); }/* Called when prettyPhoto is closed */
-              });
-          });
-        </script>
+    <script type="text/javascript">
+        tpj(document).ready(function () {
+            tpj(".fancybox").fancybox({
+                    
+                });
+            });
+    </script>
 
     <link rel="stylesheet" href="../../css/global/style.css"  />
     <link rel="stylesheet" href="../../css/royalslider/royalslider.css" />
@@ -103,7 +48,9 @@
     <!--[if lte IE 8 ]><link rel="stylesheet" type="text/css" href="../../css/index/ie.css" /><![endif]-->
     <link rel="stylesheet" type="text/css" href="../../css/index/style.css" />
     <link rel="stylesheet" type="text/css" href="../../css/index/settings.css" />
-	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="../../css/global/fancybox/jquery.fancybox.css?v=2.1.4" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../../css/global/fancybox/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
 
 </head>
 <body>
@@ -113,6 +60,8 @@
                 <div id="header">
                         <div id="logo">
                                  <img src="images/logo.png" />
+                                 <a class="fancybox" rel="group" href="big_image_1.jpg"><img src="small_image_1.jpg" alt="" /></a>
+                                 <a class="fancybox" rel="group" href="big_image_2.jpg"><img src="small_image_2.jpg" alt="" /></a>
                         </div><!-- #fin logo -->
                 
                         <div id="contenedor-registro" >
@@ -539,7 +488,186 @@
                        <div class="example-wrapper" >
 			    		 <div id="services-example-1" class="theme1">
 						 <ul>
-						<!--	###############		-	SLIDE 1	-	###############	 -->
+						    <!--	###############		-	SLIDE 1	-	###############	 -->
+							<li>
+								<img class="thumb" src="../../imagenes/index/carrousel/service2.jpg" data-bw="../../imagenes/index/carrousel/service2_bw.jpg">
+								<div style="margin-top:16px"></div>
+								<h2>Youtube Video2</h2>
+								<p>Lorem ipsum dolor sit amet, conseteetur sadipscing elitr,<br> sed diam monumy eirmod...</p>
+								<a class="buttonlight morebutton" href="#">View More</a>
+
+								<!--
+								***********************************************************************************************************
+									-	HERE YOU CAN DEFINE THE EXTRA PAGE WHICH SHOULD BE SHOWN IN CASE THE "BUTTON" HAS BEED PRESSED -
+								***********************************************************************************************************
+								-->
+								<div class="page-more">
+									<iframe class="video_clip" src="http://www.youtube.com/embed/kjX-8kQmakk?hd=1&amp;wmode=opaque&amp;autohide=1&amp;showinfo=0" height="280" width="498" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+									<div class="details">
+										<h2>Our Strategy</h2>
+										<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labora et dolore magna.</p>
+										<p>At vero eou et accusam et justo duo dolores et ea rebum.<br>Stet clita kasd gubergen.</p>
+										<a class="buttonlight" href="#">Visit Website</a>
+									</div>
+									<div class="details">
+										<h2>Step Towards Success</h2>
+										<ul class="check">
+											<li>List Item Number One</li>
+											<li>List Item Number Two</li>
+											<li>List Item Number Three</li>
+											<li>List Item Number Four</li>
+										</ul>
+										<img src="../../imagenes/index/carrousel/certified.png">
+									</div>
+									<div  class="closer"></div>
+								</div>
+							</li>
+
+                             <!--	###############		-	SLIDE 1	-	###############	 -->
+							<li>
+								<img class="thumb" src="../../imagenes/index/carrousel/service2.jpg" data-bw="../../imagenes/index/carrousel/service2_bw.jpg">
+								<div style="margin-top:16px"></div>
+								<h2>Youtube Video2</h2>
+								<p>Lorem ipsum dolor sit amet, conseteetur sadipscing elitr,<br> sed diam monumy eirmod...</p>
+								<a class="buttonlight morebutton" href="#">View More</a>
+
+								<!--
+								***********************************************************************************************************
+									-	HERE YOU CAN DEFINE THE EXTRA PAGE WHICH SHOULD BE SHOWN IN CASE THE "BUTTON" HAS BEED PRESSED -
+								***********************************************************************************************************
+								-->
+								<div class="page-more">
+									<iframe class="video_clip" src="http://www.youtube.com/embed/kjX-8kQmakk?hd=1&amp;wmode=opaque&amp;autohide=1&amp;showinfo=0" height="280" width="498" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+									<div class="details">
+										<h2>Our Strategy</h2>
+										<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labora et dolore magna.</p>
+										<p>At vero eou et accusam et justo duo dolores et ea rebum.<br>Stet clita kasd gubergen.</p>
+										<a class="buttonlight" href="#">Visit Website</a>
+									</div>
+									<div class="details">
+										<h2>Step Towards Success</h2>
+										<ul class="check">
+											<li>List Item Number One</li>
+											<li>List Item Number Two</li>
+											<li>List Item Number Three</li>
+											<li>List Item Number Four</li>
+										</ul>
+										<img src="../../imagenes/index/carrousel/certified.png">
+									</div>
+									<div  class="closer"></div>
+								</div>
+							</li>
+
+                             <!--	###############		-	SLIDE 1	-	###############	 -->
+							<li>
+								<img class="thumb" src="../../imagenes/index/carrousel/service2.jpg" data-bw="../../imagenes/index/carrousel/service2_bw.jpg">
+								<div style="margin-top:16px"></div>
+								<h2>Youtube Video2</h2>
+								<p>Lorem ipsum dolor sit amet, conseteetur sadipscing elitr,<br> sed diam monumy eirmod...</p>
+								<a class="buttonlight morebutton" href="#">View More</a>
+
+								<!--
+								***********************************************************************************************************
+									-	HERE YOU CAN DEFINE THE EXTRA PAGE WHICH SHOULD BE SHOWN IN CASE THE "BUTTON" HAS BEED PRESSED -
+								***********************************************************************************************************
+								-->
+								<div class="page-more">
+									<iframe class="video_clip" src="http://www.youtube.com/embed/kjX-8kQmakk?hd=1&amp;wmode=opaque&amp;autohide=1&amp;showinfo=0" height="280" width="498" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+									<div class="details">
+										<h2>Our Strategy</h2>
+										<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labora et dolore magna.</p>
+										<p>At vero eou et accusam et justo duo dolores et ea rebum.<br>Stet clita kasd gubergen.</p>
+										<a class="buttonlight" href="#">Visit Website</a>
+									</div>
+									<div class="details">
+										<h2>Step Towards Success</h2>
+										<ul class="check">
+											<li>List Item Number One</li>
+											<li>List Item Number Two</li>
+											<li>List Item Number Three</li>
+											<li>List Item Number Four</li>
+										</ul>
+										<img src="../../imagenes/index/carrousel/certified.png">
+									</div>
+									<div  class="closer"></div>
+								</div>
+							</li>
+
+                             <!--	###############		-	SLIDE 1	-	###############	 -->
+							<li>
+								<img class="thumb" src="../../imagenes/index/carrousel/service2.jpg" data-bw="../../imagenes/index/carrousel/service2_bw.jpg">
+								<div style="margin-top:16px"></div>
+								<h2>Youtube Video2</h2>
+								<p>Lorem ipsum dolor sit amet, conseteetur sadipscing elitr,<br> sed diam monumy eirmod...</p>
+								<a class="buttonlight morebutton" href="#">View More</a>
+
+								<!--
+								***********************************************************************************************************
+									-	HERE YOU CAN DEFINE THE EXTRA PAGE WHICH SHOULD BE SHOWN IN CASE THE "BUTTON" HAS BEED PRESSED -
+								***********************************************************************************************************
+								-->
+								<div class="page-more">
+									<iframe class="video_clip" src="http://www.youtube.com/embed/kjX-8kQmakk?hd=1&amp;wmode=opaque&amp;autohide=1&amp;showinfo=0" height="280" width="498" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+									<div class="details">
+										<h2>Our Strategy</h2>
+										<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labora et dolore magna.</p>
+										<p>At vero eou et accusam et justo duo dolores et ea rebum.<br>Stet clita kasd gubergen.</p>
+										<a class="buttonlight" href="#">Visit Website</a>
+									</div>
+									<div class="details">
+										<h2>Step Towards Success</h2>
+										<ul class="check">
+											<li>List Item Number One</li>
+											<li>List Item Number Two</li>
+											<li>List Item Number Three</li>
+											<li>List Item Number Four</li>
+										</ul>
+										<img src="../../imagenes/index/carrousel/certified.png">
+									</div>
+									<div  class="closer"></div>
+								</div>
+							</li>
+
+                            <!--	###############		-	SLIDE 1	-	###############	 -->
+							<li>
+								<img class="thumb" src="../../imagenes/index/carrousel/service2.jpg" data-bw="../../imagenes/index/carrousel/service2_bw.jpg">
+								<div style="margin-top:16px"></div>
+								<h2>Youtube Video2</h2>
+								<p>Lorem ipsum dolor sit amet, conseteetur sadipscing elitr,<br> sed diam monumy eirmod...</p
+                                <p>Lorem ipsum dolor sit amet, conseteetur sadipscing elitr,<br> sed diam monumy eirmod...</p>
+                                <p>Lorem ipsum dolor sit amet, conseteetur sadipscing elitr,<br> sed diam monumy eirmod...</p>
+								 <p>Lorem ipsum dolor sit amet, conseteetur sadipscing elitr,<br> sed diam monumy eirmod...</p>
+							
+                                <a class="buttonlight morebutton" href="#">View More</a>
+
+								<!--
+								***********************************************************************************************************
+									-	HERE YOU CAN DEFINE THE EXTRA PAGE WHICH SHOULD BE SHOWN IN CASE THE "BUTTON" HAS BEED PRESSED -
+								***********************************************************************************************************
+								-->
+								<div class="page-more">
+									<iframe class="video_clip" src="http://www.youtube.com/embed/kjX-8kQmakk?hd=1&amp;wmode=opaque&amp;autohide=1&amp;showinfo=0" height="280" width="498" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+									<div class="details">
+										<h2>Our Strategy</h2>
+										<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labora et dolore magna.</p>
+										<p>At vero eou et accusam et justo duo dolores et ea rebum.<br>Stet clita kasd gubergen.</p>
+										<a class="buttonlight" href="#">Visit Website</a>
+									</div>
+									<div class="details">
+										<h2>Step Towards Success</h2>
+										<ul class="check">
+											<li>List Item Number One</li>
+											<li>List Item Number Two</li>
+											<li>List Item Number Three</li>
+											<li>List Item Number Four</li>
+										</ul>
+										<img src="../../imagenes/index/carrousel/certified.png">
+									</div>
+									<div  class="closer"></div>
+								</div>
+							</li>
+
+                             <!--	###############		-	SLIDE 6	-	###############	 -->
 							<li>
 								<img class="thumb" src="images/services/service2.jpg" data-bw="images/services/service2_bw.jpg">
 								<div style="margin-top:16px"></div>
@@ -573,8 +701,6 @@
 									<div  class="closer"></div>
 								</div>
 							</li>
-
-
 						</ul>
 						 <div class="toolbar">
 							<div class="left"></div>

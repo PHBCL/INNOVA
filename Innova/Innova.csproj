@@ -66,6 +66,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\global\bootstrap.min.css" />
+    <Content Include="css\global\fancybox\jquery.fancybox-thumbs.css" />
+    <Content Include="css\global\fancybox\jquery.fancybox.css" />
     <Content Include="css\global\menu\megamenu.css" />
     <Content Include="css\global\style.css" />
     <Content Include="css\index\grid_horizontal_buttons_widthHeightRestrain.css" />
@@ -112,6 +114,36 @@
     <Content Include="imagenes\global\tb.png" />
     <Content Include="imagenes\global\tw.png" />
     <Content Include="imagenes\global\ver-wardrobe.png" />
+    <Content Include="imagenes\index\carrousel\badge.jpg" />
+    <Content Include="imagenes\index\carrousel\btn_dark.png" />
+    <Content Include="imagenes\index\carrousel\btn_light.png" />
+    <Content Include="imagenes\index\carrousel\certified.png" />
+    <Content Include="imagenes\index\carrousel\certified_dark.png" />
+    <Content Include="imagenes\index\carrousel\check.png" />
+    <Content Include="imagenes\index\carrousel\close.png" />
+    <Content Include="imagenes\index\carrousel\close_dark.png" />
+    <Content Include="imagenes\index\carrousel\large1.jpg" />
+    <Content Include="imagenes\index\carrousel\large2.jpg" />
+    <Content Include="imagenes\index\carrousel\left.png" />
+    <Content Include="imagenes\index\carrousel\left_dark.png" />
+    <Content Include="imagenes\index\carrousel\link.png" />
+    <Content Include="imagenes\index\carrousel\more.png" />
+    <Content Include="imagenes\index\carrousel\plus.png" />
+    <Content Include="imagenes\index\carrousel\preloader.gif" />
+    <Content Include="imagenes\index\carrousel\right.png" />
+    <Content Include="imagenes\index\carrousel\right_dark.png" />
+    <Content Include="imagenes\index\carrousel\service1.jpg" />
+    <Content Include="imagenes\index\carrousel\service1_bw.jpg" />
+    <Content Include="imagenes\index\carrousel\service2.jpg" />
+    <Content Include="imagenes\index\carrousel\service2_bw.jpg" />
+    <Content Include="imagenes\index\carrousel\service3.jpg" />
+    <Content Include="imagenes\index\carrousel\service3_bw.jpg" />
+    <Content Include="imagenes\index\carrousel\service4.jpg" />
+    <Content Include="imagenes\index\carrousel\service4_bw.jpg" />
+    <Content Include="imagenes\index\carrousel\service5.jpg" />
+    <Content Include="imagenes\index\carrousel\service5_bw.jpg" />
+    <Content Include="imagenes\index\carrousel\website_bg_tile.gif" />
+    <Content Include="imagenes\index\carrousel\website_bg_tile_dark.gif" />
     <Content Include="imagenes\index\prettyPhoto\example_delete\01.jpg" />
     <Content Include="imagenes\index\prettyPhoto\example_delete\02.jpg" />
     <Content Include="imagenes\index\prettyPhoto\example_delete\03.jpg" />
@@ -198,6 +230,8 @@
     <Content Include="js\actions\jsIndex.js" />
     <Content Include="js\actions\jsMenu.js" />
     <Content Include="js\global\bootstrap.min.js" />
+    <Content Include="js\global\fancybox\jquery.fancybox-thumbs.js" />
+    <Content Include="js\global\fancybox\jquery.fancybox.pack.js" />
     <Content Include="js\global\jquery-1.8.3.min.js" />
     <Content Include="js\global\jquery-1.9.1.min.js" />
     <Content Include="js\global\menu\megamenu.min.js" />

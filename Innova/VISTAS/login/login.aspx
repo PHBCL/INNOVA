@@ -571,7 +571,7 @@
 
 
                <div id="onp-summer-form">	
-		        <ul class="onp-tab-menu">
+                     <ul class="onp-tab-menu">
 		          <li class="onp-first-tabmenu active"><a href="#onp-signin" data-toggle="tab">Sign In</a></li>
 		          <li class="onp-last-tabmenu"><a href="#onp-register" data-toggle="tab">Register</a></li>
 		        </ul> 
@@ -604,6 +604,11 @@
 				        <button type="button" class="onp-button aquamarine"><i class="icon twitter"></i>Sign in with Twitter</button>	
 			        </div>
 	          </div><!-- end #onp-signin -->
+
+
+
+
+		      
 	  
 	          <div class="onp-register-form onp-tab-pane" id="onp-register">			
 			        <div class="onp-form-side">
@@ -626,37 +631,7 @@
           <div class="clearfix"></div>   
         </div><!-- end .onp-summer-form -->
    
- 	            <!-- #COMIENZO FOOTER -->
-     			<div id="footer">
-     					<div id="logo-footer"> 
-     							<img src="images/logo.png" />
-                         </div><!-- logo-footer -->
-                                     
-                         <div id="separador-footer"> 
-                         </div><!-- separador-footer -->
-                                     
-         				 <div id="redes-footer"> 
-         				    <div id="titulo-redesfooter">
-                                 <img src="../../imagenes/global/redes.png" />
-         				    </div>
-                            <div style="display:block">
-         				            <a href="http://link.cl"><img src="../../imagenes/global/fb.png" /></a>
-         				            <a href="http://link.cl"><img src="../../imagenes/global/tw.png" /></a>
-         					        <a href="http://link.cl"><img src="../../imagenes/global/in.png" /></a>
-                            </div> 
-         				  </div><!-- redes-footer -->
-                          <div id="sobre-empresa-footer"> 
-                                      <h5>Sobre IN</h5>
-                                      <h6>
-                                          <P></P>
-                                          <li><a href="http://link.cl">Cómo Funciona</a></li>
-									      <li><a href="http://link.cl">A Quién Está Dirigido</a></li>
-									      <li><a href="http://link.cl">FAQs</a>  </li>
-									    </h6>
-                         </div><!-- sobre-empresa-footer -->
-                         
-   				 </div>
-                    <!-- fin FOOTER-->
+ 	         
             </div>
             <!-- #fin container -->
             </div>
