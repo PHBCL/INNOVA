@@ -2,6 +2,7 @@
 //Logica para obtencion de mensajes
 function ObtenerDatos()
 {
+    
     var cantididadMensajes = 0, cantidadPostulantes = 0, cantidadIdeas = 0;
     $.ajax({
         type: "POST",

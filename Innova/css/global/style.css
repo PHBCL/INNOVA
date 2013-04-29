@@ -60,7 +60,7 @@
 */
 
 #menu {
-	width: 1080;
+	width: auto;
 	height: 27px;
 	background-image:url(../../imagenes/global/menu.jpg);
 	font-family: 'Carrois Gothic', sans-serif;

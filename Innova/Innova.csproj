@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\global\bootstrap.min.css" />
+    <Content Include="css\global\menu\megamenu.css" />
     <Content Include="css\global\style.css" />
     <Content Include="css\login\summer.theme-ie.css" />
     <Content Include="css\login\summer.theme.css" />
@@ -82,6 +83,22 @@
     <Content Include="imagenes\global\in.png" />
     <Content Include="imagenes\global\logo.png" />
     <Content Include="imagenes\global\menu.jpg" />
+    <Content Include="imagenes\global\menu\icons\background.jpg" />
+    <Content Include="imagenes\global\menu\icons\dropdown-b-up.png" />
+    <Content Include="imagenes\global\menu\icons\dropdown-b.png" />
+    <Content Include="imagenes\global\menu\icons\dropdown-up.png" />
+    <Content Include="imagenes\global\menu\icons\dropdown.png" />
+    <Content Include="imagenes\global\menu\icons\img01.jpg" />
+    <Content Include="imagenes\global\menu\icons\img02.jpg" />
+    <Content Include="imagenes\global\menu\icons\img03.jpg" />
+    <Content Include="imagenes\global\menu\icons\img04.jpg" />
+    <Content Include="imagenes\global\menu\icons\img05.jpg" />
+    <Content Include="imagenes\global\menu\icons\img06.jpg" />
+    <Content Include="imagenes\global\menu\icons\right-b.png" />
+    <Content Include="imagenes\global\menu\icons\right.png" />
+    <Content Include="imagenes\global\menu\mini-icons-black.png" />
+    <Content Include="imagenes\global\menu\mini-icons-white.png" />
+    <Content Include="imagenes\global\menu\social-icons.png" />
     <Content Include="imagenes\global\redes.png" />
     <Content Include="imagenes\global\sep.png" />
     <Content Include="imagenes\global\separador-header.png" />
@@ -118,6 +135,8 @@
     <Content Include="js\actions\jsMenu.js" />
     <Content Include="js\global\bootstrap.min.js" />
     <Content Include="js\global\jquery-1.8.3.min.js" />
+    <Content Include="js\global\menu\megamenu.min.js" />
+    <Content Include="js\global\menu\megamenu_plugins.js" />
     <Content Include="js\login\libs\bootstrap.js" />
     <Content Include="js\login\libs\css3-mediaqueries.js" />
     <Content Include="js\login\onp.plugins.min.js" />

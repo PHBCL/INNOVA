@@ -4,6 +4,8 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
+    <script type="text/javascript" src="../../js/global/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../../js/menu/custom.js"></script>
     <script src="../../js/actions/jsMenu.js"></script>
     <script>
         //Logica para cambiar tags.
@@ -62,7 +64,5 @@
 
     
 
-<script type="text/javascript" src="../../js/globales/jquery-1.8.2.min.js"></script>
-<script type="text/javascript" src="../../js/menu/custom.js"></script>
 </body>
 </html>
