@@ -64,27 +64,24 @@
 	height: 27px;
 	background-image:url(../../imagenes/global/menu.jpg);
 	font-family: 'Carrois Gothic', sans-serif;
-	padding-top:8px;
-	margin-left:20px;
-	
+	padding-top:0px;
 }
 
 /*
 :::::::::::::::::::  VITRINA HOME  :::::::::::::::::::
 */
 
-#contenedor-vitrina {
+#contenedor-noticias {
 	width: 100%;
 	height: 453px;
-	background:#FFF;
-	border:1px solid red;
-	padding-top:15px;
+    margin-top:19px;
 }
 #vitrina {
 	width: 100%;
 	height: 433px;
 	background:#000;
 	border:1px solid green;
+
 }
 #texto-vitrina {
 	width: 39%;
@@ -103,6 +100,7 @@
 	width: 100%;
 	height: 536px;
 	text-align:center;
+    margin-top:8px;
 }
 #titulo-contenedor-home {
 	width: 100%;
