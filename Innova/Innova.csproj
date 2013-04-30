@@ -31,6 +31,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+    <IncludeIisSettings>false</IncludeIisSettings>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -70,6 +71,8 @@
     <Content Include="css\index\grid_horizontal_buttons_widthHeightRestrain.css" />
     <Content Include="css\index\ie.css" />
     <Content Include="css\index\prettyPhoto.css" />
+    <Content Include="css\index\settings.css" />
+    <Content Include="css\index\style.css" />
     <Content Include="css\login\summer.theme-ie.css" />
     <Content Include="css\login\summer.theme.css" />
     <Content Include="css\menu\style.css" />
@@ -109,6 +112,63 @@
     <Content Include="imagenes\global\tb.png" />
     <Content Include="imagenes\global\tw.png" />
     <Content Include="imagenes\global\ver-wardrobe.png" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\01.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\02.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\03.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\04.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\05.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\06.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\07.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\08.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\09.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\10.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\11.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\12.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\13.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\14.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\15.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\16.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\17.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\18.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\19.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\20.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\21.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\22.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\23.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\24.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\25.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\26.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\27.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\28.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\29.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\30.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\31.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\32.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\33.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\34.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\35.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\36.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\37.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\38.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\39.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\40.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\41.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\42.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\43.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\44.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\45.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\46.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\47.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\example_delete\48.jpg" />
+    <Content Include="imagenes\index\prettyPhoto\icons\play.png" />
+    <Content Include="imagenes\index\prettyPhoto\icons\thumb_backward.png" />
+    <Content Include="imagenes\index\prettyPhoto\icons\thumb_backward_on.png" />
+    <Content Include="imagenes\index\prettyPhoto\icons\thumb_backward_v.png" />
+    <Content Include="imagenes\index\prettyPhoto\icons\thumb_backward_v_on.png" />
+    <Content Include="imagenes\index\prettyPhoto\icons\thumb_forward.png" />
+    <Content Include="imagenes\index\prettyPhoto\icons\thumb_forward_on.png" />
+    <Content Include="imagenes\index\prettyPhoto\icons\thumb_forward_v.png" />
+    <Content Include="imagenes\index\prettyPhoto\icons\thumb_forward_v_on.png" />
     <Content Include="imagenes\login\135817043error-alt.png" />
     <Content Include="imagenes\login\blank.png" />
     <Content Include="imagenes\login\checkbox.png" />
@@ -135,8 +195,10 @@
     <Content Include="imagenes\menu\subMenuBg.png" />
     <Content Include="imagenes\menu\subMenuBgHover.png" />
     <Content Include="imagenes\royalslider\rs-minimal-white.png" />
+    <Content Include="js\actions\jsIndex.js" />
     <Content Include="js\actions\jsMenu.js" />
     <Content Include="js\global\bootstrap.min.js" />
+    <Content Include="js\global\jquery-1.8.3.min.js" />
     <Content Include="js\global\jquery-1.9.1.min.js" />
     <Content Include="js\global\menu\megamenu.min.js" />
     <Content Include="js\global\menu\megamenu_plugins.js" />
@@ -151,7 +213,6 @@
     <Content Include="js\menu\custom.js" />
     <Content Include="js\royalslider\jquery.easing-1.3.js" />
     <Content Include="js\royalslider\jquery.royalslider.min.js" />
-    <Content Include="js\royalslider\jsIndex.js" />
     <Content Include="servicios\ServicioLogin.asmx" />
     <Content Include="servicios\ServicioMenu.asmx" />
     <Content Include="vistas\index\index.aspx" />
@@ -234,9 +295,11 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>51490</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:48930/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost:48930/</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

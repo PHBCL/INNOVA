@@ -5,10 +5,10 @@
     <link href='http://fonts.googleapis.com/css?family=Carrois+Gothic|Oswald' rel='stylesheet' type='text/css' />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>IN</title>
-    <script type="text/javascript"  src="../../js/global/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript"  src="../../js/global/jquery-1.8.3.min.js"></script>
     <script type="text/javascript"  src="../../js/royalslider/jquery.royalslider.min.js"></script>
     <script type="text/javascript" src="../../js/royalslider/jquery.easing-1.3.js"></script>
-    <script type="text/javascript"  src="../../js/royalslider/jsIndex.js"></script>
+    <script type="text/javascript"  src="../../js/actions/jsIndex.js"></script>
     <script type="text/javascript"  src="../../js/global/bootstrap.min.js"></script>
     <script type="text/javascript" src="../../js/global/menu/megamenu_plugins.js"></script>
     <script type="text/javascript" src="../../js/global/menu/megamenu.min.js"></script>
@@ -26,9 +26,9 @@
             });
         });
     </script>
-     <script type="text/javascript" src="../../js/index/jquery.prettyPhoto.js" charset="utf-8"></script>
      <script type="text/javascript" src="../../js/index/jquery.mousewheel.js"></script>
      <script type="text/javascript" src="../../js/index/jquery.thumbGallery.min.js"></script>
+    <script type="text/javascript" src="../../js/index/jquery.themepunch.services.min.js"></script>
      <script type="text/javascript">
 
           function thumbGallerySetupDone() {
@@ -100,9 +100,11 @@
     <link rel="stylesheet" href="../../css/royalslider/Style.css" />
     <link rel="stylesheet" href="../../css/global/bootstrap.min.css" />
     <link rel="stylesheet" href="../../css/global/menu/megamenu.css" />
-    <link rel="stylesheet" href="../../css/index/prettyPhoto.css" type="text/css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="../../css/index/grid_horizontal_buttons_widthHeightRestrain.css" />
     <!--[if lte IE 8 ]><link rel="stylesheet" type="text/css" href="../../css/index/ie.css" /><![endif]-->
+    <link rel="stylesheet" type="text/css" href="../../css/index/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/index/settings.css" />
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+
 </head>
 <body>
 
@@ -115,8 +117,8 @@
                 
                         <div id="contenedor-registro" >
                            <div class="btn-group" style="margin-top:10px;margin-left:5px;">
-                              <button class="btn">Crear cuenta en IN</button>
-                              <button class="btn">Login</button>
+                              <button class="btn" onclick="toLogin();">Crear cuenta en IN</button>
+                              <button class="btn" onclick="toLogin();">Login</button>
                             </div>
                         </div>
                        <!-- #fin contenedor registro -->
@@ -534,138 +536,55 @@
                           <small>Semana <cite title="Source Title">22-29</cite></small>
                         </blockquote>
                        
-                    </div>
-                     
-                    <!-- wrapper for the whole component -->
-    	            <div id="componentWrapper">
-                         <div class="thumbContainer">
-                         <div class="thumbInnerContainer">
-                   		     <div class='thumbHolder' data-title="Optional title">  
-                                 <a class="pp_content" href="http://vimeo.com/14665315" data-rel="prettyPhoto[gallery1]" title="Optional description in Prettyphoto."><img class="thumb_hidden" src="../../imagenes/index/prettyPhoto/example_delete/01.jpg" width="240" height="155" alt="Vimeo Video" /></a>  
-                             </div>
-                             <div class='thumbHolder' 
-                                 data-title="Pellentesque aliquam">  
-                                 <a class="pp_content" href="http://www.youtube.com/watch?v=Q9Phn1yQT8U" data-rel="prettyPhoto[gallery1]" title="Morbi mi. Vivamus in nulla. Praesent nulla nibh, molestie id, lacinia et, dictum sed, eros."><img class="thumb_hidden" src="../../imagenes/index/prettyPhoto/example_delete/02.jpg" width="240" height="155" alt="Youtube Video" /></a>                         
-                             </div>
-                             <div class='thumbHolder' 
-                                 data-title="Fusce lobortis">  
-                                 <a class="pp_content" href="media/category3/main/03.jpg" data-rel="prettyPhoto[gallery1]" title="Optional description in Prettyphoto."><img class="thumb_hidden" src="../../imagenes/index/prettyPhoto/example_delete/03.jpg" width="240" height="155" alt="Optional image title" /></a>  
-                             </div>
-                         
-                             <div class='thumbHolder' 
-                                 data-title="Aliquam erat volutpat">  
-                                 <a class="pp_content" href="http://vimeo.com/14665200" data-rel="prettyPhoto[gallery1]" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."><img class="thumb_hidden" src="../../imagenes/index/prettyPhoto/example_delete/04.jpg" width="240" height="155" alt="Vimeo Video" /></a>  
-                             </div>
-                         
-                             <div class='thumbHolder' 
-                                 data-title="Ut porta dolor">  
-                                 <a class="pp_content" href="http://www.youtube.com/watch?v=rDb7TMolGfs" data-rel="prettyPhoto[gallery1]" title="Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."><img class="thumb_hidden" src="../../imagenes/index/prettyPhoto/example_delete/05.jpg" width="240" height="155" alt="Youtube Video" /></a>
-                             </div>
-                         
-                             <div class='thumbHolder' 
-                                 data-title="Proin magna nunc">  
-                                 <a class="pp_content" href="media/category3/main/06.jpg" data-rel="prettyPhoto[gallery1]" title="Optional description in Prettyphoto."><img class="thumb_hidden" src="../../imagenes/index/prettyPhoto/example_delete/06.jpg" width="240" height="155" alt="Optional image title" /></a> 
-                             </div>
-                         
-                             <div class='thumbHolder' 
-                                 data-title="Optional title">  
-                                 <a class="pp_content" href="http://vimeo.com/14664972" data-rel="prettyPhoto[gallery1]" title="Duis egestas, quam faucibus interdum tincidunt, enim sem tincidunt tellus, sed condimentum tellus tortor ut mi."><img class="thumb_hidden" src="../../imagenes/index/prettyPhoto/example_delete/07.jpg" width="240" height="155" alt="Vimeo Video" /></a>
-                             </div>
-                         
-                             <div class='thumbHolder' 
-                                 data-title="Vivamus in nulla">  
-                                 <a class="pp_content" href="http://www.youtube.com/watch?v=rcpFo9qcB-4" data-rel="prettyPhoto[gallery1]" title="Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."><img class="thumb_hidden" src="../../imagenes/index/prettyPhoto/example_delete/08.jpg" width="240" height="155" alt="Youtube Video" /></a> 
-                             </div>
-                         
-                             <div class='thumbHolder' 
-                                 data-title="Donec non purus">  
-                                 <a class="pp_content" href="media/category3/main/09.jpg" data-rel="prettyPhoto[gallery1]" title="Optional description in Prettyphoto."><img class="thumb_hidden" src="../../imagenes/index/prettyPhoto/example_delete/09.jpg" width="240" height="155" alt="Optional image title" /></a>    
-                             </div>
-                         
-                             <div class='thumbHolder' 
-                                 data-title="Pellentesque aliquam">  
-                                 <a class="pp_content" href="http://vimeo.com/14665315" data-rel="prettyPhoto[gallery1]" title="Optional description in Prettyphoto."><img class="thumb_hidden" src="../../imagenes/index/prettyPhoto/example_delete/10.jpg" width="240" height="155" alt="Vimeo Video" /></a> 
+                       <div class="example-wrapper" >
+			    		 <div id="services-example-1" class="theme1">
+						 <ul>
+						<!--	###############		-	SLIDE 1	-	###############	 -->
+							<li>
+								<img class="thumb" src="images/services/service2.jpg" data-bw="images/services/service2_bw.jpg">
+								<div style="margin-top:16px"></div>
+								<h2>Youtube Video2</h2>
+								<p>Lorem ipsum dolor sit amet, conseteetur sadipscing elitr,<br> sed diam monumy eirmod...</p>
+								<a class="buttonlight morebutton" href="#">View More</a>
 
-                             </div>
-                         
-                             <div class='thumbHolder' 
-                                 data-title="Fusce lobortis">  
-                                 <a class="pp_content" href="http://www.youtube.com/watch?v=Q9Phn1yQT8U" data-rel="prettyPhoto[gallery1]" title="Morbi mi. Vivamus in nulla. Praesent nulla nibh, molestie id, lacinia et, dictum sed, eros."><img class="thumb_hidden" src="../../imagenes/index/prettyPhoto/example_delete/11.jpg" width="240" height="155" alt="Youtube Video" /></a>
-                             </div>
-                         
-                             <div class='thumbHolder' 
-                                 data-title="Ut porta dolor">  
-                                 <a class="pp_content" href="media/category3/main/12.jpg" data-rel="prettyPhoto[gallery1]" title="Optional description in Prettyphoto."><img class="thumb_hidden" src="../../imagenes/index/prettyPhoto/example_delete/12.jpg" width="240" height="155" alt="Optional image title" /></a>  
-                             </div>
-                         
-                             <div class='thumbHolder' 
-                                 data-title="Nullam aliquam">  
-                                 <a class="pp_content" href="http://vimeo.com/14665200" data-rel="prettyPhoto[gallery1]" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."><img class="thumb_hidden" src="../../imagenes/index/prettyPhoto/example_delete/13.jpg" width="240" height="155" alt="Vimeo Video" /></a>
-                             </div>
-                         
-                             <div class='thumbHolder' 
-                                 data-title="Aliquam erat volutpat">  
-                                 <a class="pp_content" href="http://www.youtube.com/watch?v=rDb7TMolGfs" data-rel="prettyPhoto[gallery1]" title="Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."><img class="thumb_hidden" src="../../imagenes/index/prettyPhoto/example_delete/14.jpg" width="240" height="155" alt="Youtube Video" /></a>
-                             </div>
-                         
-                             <div class='thumbHolder' 
-                                 data-title="Vivamus in nulla">  
-                                 <a class="pp_content" href="media/category3/main/15.jpg" data-rel="prettyPhoto[gallery1]" title="Optional description in Prettyphoto."><img class="thumb_hidden" src="../../imagenes/index/prettyPhoto/example_delete/15.jpg" width="240" height="155" alt="Optional image title" /></a>  
-                             </div>
-                        
-                             <div class='thumbHolder' 
-                                 data-title="Proin magna nunc">  
-                                 <a class="pp_content" href="http://vimeo.com/14664972" data-rel="prettyPhoto[gallery1]" title="Duis egestas, quam faucibus interdum tincidunt, enim sem tincidunt tellus, sed condimentum tellus tortor ut mi."><img class="thumb_hidden" src="../../imagenes/index/prettyPhoto/example_delete/16.jpg" width="240" height="155" alt="Vimeo Video" /></a>
-                             </div>
-                         
-                             <div class='thumbHolder' 
-                                 data-title="Donec non purus">  
-                                <a class="pp_content" href="http://www.youtube.com/watch?v=rcpFo9qcB-4" data-rel="prettyPhoto[gallery1]" title="Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."><img class="thumb_hidden" src="../../imagenes/index/prettyPhoto/example_delete/17.jpg" width="240" height="155" alt="Youtube Video" /></a> 
-                             </div>
-                         
-                             <div class='thumbHolder' 
-                                 data-title="Pellentesque aliquam">  
-                                 <a class="pp_content" href="media/category3/main/18.jpg" data-rel="prettyPhoto[gallery1]" title="Optional description in Prettyphoto."><img class="thumb_hidden" src="../../imagenes/index/prettyPhoto/example_delete/18.jpg" width="240" height="155" alt="Optional image title" /></a>   
-                             </div>
-                         
-                             <div class='thumbHolder' 
-                                 data-title="Ut porta dolor">  
-                                 <a class="pp_content" href="http://vimeo.com/14665315" data-rel="prettyPhoto[gallery1]" title="Optional description in Prettyphoto."><img class="thumb_hidden" src="../../imagenes/index/prettyPhoto/example_delete/19.jpg" width="240" height="155" alt="Vimeo Video" /></a> 
+								<!--
+								***********************************************************************************************************
+									-	HERE YOU CAN DEFINE THE EXTRA PAGE WHICH SHOULD BE SHOWN IN CASE THE "BUTTON" HAS BEED PRESSED -
+								***********************************************************************************************************
+								-->
+								<div class="page-more">
+									<iframe class="video_clip" src="http://www.youtube.com/embed/kjX-8kQmakk?hd=1&amp;wmode=opaque&amp;autohide=1&amp;showinfo=0" height="280" width="498" frameborder="0" webkitAllowFullScreen allowFullScreen></iframe>
+									<div class="details">
+										<h2>Our Strategy</h2>
+										<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labora et dolore magna.</p>
+										<p>At vero eou et accusam et justo duo dolores et ea rebum.<br>Stet clita kasd gubergen.</p>
+										<a class="buttonlight" href="#">Visit Website</a>
+									</div>
+									<div class="details">
+										<h2>Step Towards Success</h2>
+										<ul class="check">
+											<li>List Item Number One</li>
+											<li>List Item Number Two</li>
+											<li>List Item Number Three</li>
+											<li>List Item Number Four</li>
+										</ul>
+										<img src="images/certified.png">
+									</div>
+									<div  class="closer"></div>
+								</div>
+							</li>
 
-                             </div>
-                         
-                             <div class='thumbHolder' 
-                                 data-title="Optional title">  
-                                 <a class="pp_content" href="http://www.youtube.com/watch?v=Q9Phn1yQT8U" data-rel="prettyPhoto[gallery1]" title="Morbi mi. Vivamus in nulla. Praesent nulla nibh, molestie id, lacinia et, dictum sed, eros."><img class="thumb_hidden" src="../../imagenes/index/prettyPhoto/example_delete/20.jpg" width="240" height="155" alt="Youtube Video" /></a>
-                             </div>
-                         
-                             <div class='thumbHolder' data-title="Vivamus in nulla">  
-                                 <a class="pp_content" href="http://www.google.cl"  title="Optional description in Prettyphoto.">
-                                     <img class="thumb_hidden" src="../../imagenes/index/prettyPhoto/example_delete/21.jpg" width="240" height="155" alt="Optional image title" />
-                                 </a>  
-                             </div>
-                    
-                        </div>
-                    </div>
-                    <div class="thumbBackward thumb_hidden"><img src="../../imagenes/index/prettyPhoto/icons/thumb_backward.png" alt="" width="21" height="31" /></div>	
-                    <div class="thumbForward thumb_hidden"><img src="../../imagenes/index/prettyPhoto/icons/thumb_forward.png" alt="" width="21" height="31" /></div>  
-   		            <!-- public function calls -->
-    	            <div id='publicFunctions'>
-       		            <p>PUBLIC METHODS</p><br/>
-                        <ul>
-                            <!-- start/stop all inner slideshows (true = start, false = stop) -->
-                            <li><a href='#' onClick="jQuery.fn.thumbGallery.toggleInnerslideShow(true); return false;">start/stop all inner slideshows</a></li>
-                
-                            <!-- start/stop specific inner slideshow (i = item number in html order starting from 0, true = start, false = stop) -->
-                            <li><a href='#' onClick="jQuery.fn.thumbGallery.toggleInnerslideShowNum(0, true); return false;">start/stop specific inner slideshow number #</a></li>
-                
-                            <!-- get Thumb Holder (retrun thumb holder, i = item number in html order starting from 0) -->
-                            <li><a href='#' onClick="jQuery.fn.thumbGallery.getThumbHolder(0); return false;">get thumb holder number #</a></li>
-                        </ul>
-                      </div>
-                    </div> 
+
+						</ul>
+						 <div class="toolbar">
+							<div class="left"></div>
+                             <div class="right"></div>
+						 </div>
+					     </div>
+			        </div>
+                 </div>
                 </div><!-- fin contenedor-modulos-home -->
             </div>
-            <!-- #fin wrapper -->
+    </div>
 </body>
 </html>
