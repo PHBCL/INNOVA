@@ -1,26 +1,40 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="Innova.vistas.login.login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="proyecto.aspx.cs" Inherits="Innova.vistas.proyecto.proyecto" %>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head id="Head1" runat="server">
-    <title></title>
-    <script type="text/javascript"  src="../../js/global/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript"  src="../../js/royalslider/jquery.royalslider.min.js"></script>
-    <script type="text/javascript" src="../../js/royalslider/jquery.easing-1.3.js"></script>
-    <script type="text/javascript"  src="../../js/royalslider/jsIndex.js"></script>
-    <script type="text/javascript"  src="../../js/global/bootstrap.min.js"></script>
-    <script src="../../js/login/onp.plugins.min.js"></script>
-    <script type="text/javascript" src="../../js/global/menu/megamenu_plugins.js"></script><!-- Mega Menu Plugins -->
-    <script type="text/javascript" src="../../js/global/menu/megamenu.min.js"></script><!-- Mega Menu Script -->
-    <script>
-        $(document).ready(function ($) {
-            $('.megamenu').megaMenuCompleteSet({
-                menu_speed_show: 300, // Time (in milliseconds) to show a drop down
-                menu_speed_hide: 200, // Time (in milliseconds) to hide a drop down
-                menu_speed_delay: 200, // Time (in milliseconds) before showing a drop down
-                menu_effect: 'hover_fade', // Drop down effect, choose between 'hover_fade', 'hover_slide', etc.
-                menu_click_outside: 1, // Clicks outside the drop down close it (1 = true, 0 = false)
-                menu_show_onload: 0, // Drop down to show on page load (type the number of the drop down, 0 for none)
-                menu_responsive: 1 // 1 = Responsive, 0 = Not responsive
+<head>
+     <link href='http://fonts.googleapis.com/css?family=Carrois+Gothic|Oswald' rel='stylesheet' type='text/css' />
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+     <title>IN</title>
+     <script type="text/javascript"  src="../../js/global/jquery-1.8.3.min.js"></script>
+     <script type="text/javascript"  src="../../js/royalslider/jquery.royalslider.min.js"></script>
+     <script type="text/javascript" src="../../js/royalslider/jquery.easing-1.3.js"></script>
+     <script type="text/javascript"  src="../../js/actions/jsIndex.js"></script>
+     <script type="text/javascript"  src="../../js/global/bootstrap.min.js"></script>
+     <script type="text/javascript" src="../../js/global/menu/megamenu_plugins.js"></script>
+     <script type="text/javascript" src="../../js/global/menu/megamenu.min.js"></script>
+     <script type="text/javascript" src="../../js/index/jquery.cssAnimate.mini.js"></script>
+     <script type="text/javascript" src="../../js/global/fancybox/jquery.fancybox.pack.js?v=2.1.4"></script>
+     <script type="text/javascript" src="../../js/global/fancybox/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+     <script>
+         tpj(document).ready(function ($) {
+             $('.megamenu').megaMenuCompleteSet({
+                 menu_speed_show: 300, // Time (in milliseconds) to show a drop down
+                 menu_speed_hide: 200, // Time (in milliseconds) to hide a drop down
+                 menu_speed_delay: 200, // Time (in milliseconds) before showing a drop down
+                 menu_effect: 'hover_fade', // Drop down effect, choose between 'hover_fade', 'hover_slide', etc.
+                 menu_click_outside: 1, // Clicks outside the drop down close it (1 = true, 0 = false)
+                 menu_show_onload: 0, // Drop down to show on page load (type the number of the drop down, 0 for none)
+                 menu_responsive: 1 // 1 = Responsive, 0 = Not responsive
+             });
+         });
+    </script>
+    <script type="text/javascript" src="../../js/index/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="../../js/index/jquery.thumbGallery.min.js"></script>
+    <script type="text/javascript" src="../../js/index/jquery.themepunch.services.min.js"></script>
+    <script type="text/javascript">
+        tpj(document).ready(function () {
+            tpj(".fancybox").fancybox({
+
             });
         });
     </script>
@@ -28,40 +42,18 @@
     <link rel="stylesheet" href="../../css/royalslider/royalslider.css" />
     <link rel="stylesheet" href="../../css/royalslider/rs-minimal-white.css" />
     <link rel="stylesheet" href="../../css/royalslider/Style.css" />
-    <link rel='stylesheet' href="../../css/login/summer.theme.css" type='text/css' media='all' />
-    
-    <!--[if lt IE 8]>
-	    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
-    <![endif]-->
-
-    <!--[if lt IE 9]>
-	    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
-	    <link rel='stylesheet' href='../../css/login/summer.theme-ie.css' type='text/css' media='all'>	    
-	    <script src="../../js/login/libs/css3-mediaqueries.js"></script>
-    <![endif]-->
-
+    <link rel="stylesheet" href="../../css/global/bootstrap.min.css" />
     <link rel="stylesheet" href="../../css/global/menu/megamenu.css" />
-    <script type="text/javascript">
-        function realizarLogin() {
-            alert("En login:" + document.getElementById('txtNombre').value);
-            alert("En login:" + document.getElementById('txtPassword').value);
-            $.ajax({
-                type: "POST",
-                url: "/servicios/ServicioLogin.asmx/Login",
-                data: '{"usuario":"' + document.getElementById('txtNombre').value + '","password":"' + document.getElementById('txtPassword').value + '"}',
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                success: function (msg) {
-                    if (msg.d._usuario != null && msg.d._password) {
-                        window.location.href = "../MENU/Menu.aspx";
-                    }
-                    else {
-                        alert("Usuario No existe");
-                    }
-                }
-            });
-        }
-    </script>
+    <!--[if lte IE 8 ]><link rel="stylesheet" type="text/css" href="../../css/index/ie.css" /><![endif]-->
+    <link rel="stylesheet" type="text/css" href="../../css/index/style.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/index/settings.css" />
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="../../css/global/fancybox/jquery.fancybox.css?v=2.1.4" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../../css/global/fancybox/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+
+    <link href='http://fonts.googleapis.com/css?family=Noto+Serif' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="../../css/proyecto/style.css"  />
 </head>
 
 <body>
@@ -69,7 +61,7 @@
 	<div id="container">
                 <div id="header">
                         <div id="logo">
-                                 <img src="images/logo.png" />
+                                 <img src="" />
                         </div><!-- #fin logo -->
                 </div>
                 <!-- #fin header -->
@@ -382,7 +374,7 @@
                                             <h2>Add videos aswell !</h2>
                                             <p>Sed at justo justo. Nunc pretium laoreet tincidunt. Curabitur ac ipsum vel quam vulputate tempor in eu nulla. Duis sodales tortor ut arcu dictum tincidunt.</p>
                                             <div class="video_container">
-                                                <iframe src="http://player.vimeo.com/video/32001208?portrait=0&amp;badge=0"></iframe>
+                                                <iframe src=""></iframe>
                                             </div>
                                             <p>Phasellus molestie facilisis orci ut bibendum. Aliquam accumsan eros sit amet metus egestas porta. Aenean at sapien leo. Aliquam dapibus sem ac arcu bibendum dignissim. Ut ac sapien ligula, et convallis diam.</p>
             
@@ -569,41 +561,73 @@
                                 </li><!-- End Right Item -->
                             </ul><!-- End Mega Menu -->
                         </div><!-- End Menu Container -->
+                        
+                        
+           	  <div id="body">        
+               <div id="cabeceraProyecto">
+            	 <p id="textoProyecto">
+                        NOMBRE DE PROYECTO
+                 </p>
+                 <div id="descripcionCortaProyecto">
+                     <p id="descripcionCortaTexto">
+                         DESCRIPCION CORTA PROYECTO
+                     </p>
+                 </div>
+               </div>
+               <div id="tabsProyecto">
+               		TABS
+               </div>
+               <div id="proyectContent">
+				   <div id="mediaProyecto">
+	            	  <iframe id="video_clip" src="http://www.youtube.com/embed/kjX-8kQmakk?hd=1&amp;wmode=opaque&amp;autohide=1&amp;showinfo=0" frameborder="0"></iframe>
+	               </div>
+	               <div id="creadorProyecto">
+	            	   Detalle de contacto y tiempo estimado
+	               </div>
+	               <br class="clearBoth">
+	           	   <div id="detalleProyecto">
+	                  REDES Y VIRALIZACION
+	               </div>
+	               <div id="tituloColaboradores">
+	                 TITULO COLABORADORES
+	               </div>
+				   <br class="clearBoth">
+				   
+				   <div id="contenedorDescripcionProyecto">	        
+		              <div id="descripcionProyecto">
+       	                DESCRIPCION DE LA IDEA
+       	              </div>
+       	              <div id="imagenesProyecto">
+       	              	IMAGENES
+       	              </div>
+	               </div>
 
-
-
-
-               <div id="onp-summer-form">	
-                     <ul class="onp-tab-menu">
-		          <li class="onp-first-tabmenu active"><a href="#onp-signin" data-toggle="tab">Sign In</a></li>
-		          <li class="onp-last-tabmenu"><a href="#onp-register" data-toggle="tab">Register</a></li>
-		        </ul> 
-		        <div class="onp-tab-content">
-		        <div class="onp-login-form onp-tab-pane active" id="onp-signin">
-			        <div class="onp-form-side">	
-				        <div class="onp-login-area">
-					        <h4>Login to account</h4>
-					        <form>
-						        <p><label><input id="txtNombre" type="text"  placeholder="Usuario"><span class="onp-warning-text"></span></label></p>
-						        <p><label><input id="txtPassword" type="password"  placeholder="Password"><span class="onp-warning-text"></span></label></p>
-						        <button type="submit" class="onp-process-btn" onclick="realizarLogin();">Ingresar</button>					
-					        </form>
-				        </div>
-				        <div class="onp-forgot-login-area">
-					        <h4>Recuperacion de Password</h4>
-					        <p>Ingresa tu Email para reenviarte tu contraseña</p>
-					        <form>
-						        <p><label><input type="text" name="onp-forgot-lgn" placeholder="E-mail address"><span class="onp-warning-text"></span></label></p>											
-						        <button type="submit" class="onp-process-btn">Enviar</button>					
-					        </form>
-				        </div>
-			        </div>
-	          </div>
-	        </div><!-- end tabcontent -->
-          <div class="clearfix"></div>   
-        </div><!-- end .onp-summer-form -->
-   
- 	         
+					
+				  <div id="colaboradoresProyecto">
+						<div id="colaborador1">
+                            <div class="flotados"></div>
+							COLABORADOR 1
+						</div>	        
+						<div id="colaborador2">
+							COLABORADOR 2
+						</div>	                 	
+						<div id="colaborador3">
+							COLABORADOR 3
+						</div>	                 	
+						<div id="colaborador4">
+							COLABORADOR 4
+						</div>	              	
+       			   </div>
+				   <br class="clearBoth">
+					
+	               <div id="proyeccionProyecto">
+       			   		  	LOGROS A FUTURO
+       			   </div>
+       			   <div id="consultasProyecto">
+       			   		ENVIAR CONSULTA/REPORTAR
+       			   </div>
+       			 </div>       
+               </div>
             </div>
             <!-- #fin container -->
             </div>

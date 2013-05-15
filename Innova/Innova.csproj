@@ -78,6 +78,7 @@
     <Content Include="css\login\summer.theme-ie.css" />
     <Content Include="css\login\summer.theme.css" />
     <Content Include="css\menu\style.css" />
+    <Content Include="css\proyecto\style.css" />
     <Content Include="css\royalslider\royalslider.css" />
     <Content Include="css\royalslider\rs-minimal-white.css" />
     <Content Include="css\royalslider\Style.css" />
@@ -226,6 +227,7 @@
     <Content Include="imagenes\menu\sidebarBg.png" />
     <Content Include="imagenes\menu\subMenuBg.png" />
     <Content Include="imagenes\menu\subMenuBgHover.png" />
+    <Content Include="imagenes\proyecto\retina_wood.png" />
     <Content Include="imagenes\royalslider\rs-minimal-white.png" />
     <Content Include="js\actions\jsIndex.js" />
     <Content Include="js\actions\jsMenu.js" />
@@ -249,9 +251,11 @@
     <Content Include="js\royalslider\jquery.royalslider.min.js" />
     <Content Include="servicios\ServicioLogin.asmx" />
     <Content Include="servicios\ServicioMenu.asmx" />
+    <Content Include="servicios\ServicioProyecto.asmx" />
     <Content Include="vistas\index\index.aspx" />
     <Content Include="vistas\login\login.aspx" />
     <Content Include="vistas\menu\menu.aspx" />
+    <Content Include="vistas\proyecto\proyecto.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -262,6 +266,10 @@
     </Compile>
     <Compile Include="servicios\ServicioMenu.asmx.cs">
       <DependentUpon>ServicioMenu.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="servicios\ServicioProyecto.asmx.cs">
+      <DependentUpon>ServicioProyecto.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="vistas\index\index.aspx.cs">
@@ -292,6 +300,13 @@
     </Compile>
     <Compile Include="vistas\menu\menu.aspx.designer.cs">
       <DependentUpon>menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\proyecto\proyecto.aspx.cs">
+      <DependentUpon>proyecto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\proyecto\proyecto.aspx.designer.cs">
+      <DependentUpon>proyecto.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

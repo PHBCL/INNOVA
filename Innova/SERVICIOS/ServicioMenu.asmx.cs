@@ -39,10 +39,6 @@ namespace Innova.servicios
                 return null;
             }
         }
-
-       
-     
-
     }
 
     public class CantidadesMensajes
