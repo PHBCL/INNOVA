@@ -115,6 +115,8 @@
     <Content Include="imagenes\global\tb.png" />
     <Content Include="imagenes\global\tw.png" />
     <Content Include="imagenes\global\ver-wardrobe.png" />
+    <Content Include="imagenes\icons\glyphicons_039_notes.png" />
+    <Content Include="imagenes\icons\glyphicons_039_notes_h.png" />
     <Content Include="imagenes\index\carrousel\badge.jpg" />
     <Content Include="imagenes\index\carrousel\btn_dark.png" />
     <Content Include="imagenes\index\carrousel\btn_light.png" />

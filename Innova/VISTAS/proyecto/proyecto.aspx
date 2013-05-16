@@ -562,37 +562,54 @@
                             </ul><!-- End Mega Menu -->
                         </div><!-- End Menu Container -->
                         
-                        
-           	  <div id="body">        
+
+
                <div id="cabeceraProyecto">
-            	 <p id="textoProyecto">
-                        NOMBRE DE PROYECTO
-                 </p>
-                 <div id="descripcionCortaProyecto">
-                     <p id="descripcionCortaTexto">
-                         DESCRIPCION CORTA PROYECTO
+            	     <p id="textoProyecto">
+                            NOMBRE DE PROYECTO
                      </p>
-                 </div>
+                     <div id="descripcionCortaProysecto">
+                         <p id="descripcionCortaTexto">
+                             DESCRIPCION CORTA PROYECTO
+                         </p>
+                     </div>
                </div>
+             
                <div id="tabsProyecto">
-               		TABS
+                    <div id="inicio">INICIO</div>
+                    <div id="observaciones">COMENTARIOS</div>
                </div>
-               <div id="proyectContent">
+
+               <div id="body"> 
+                 <div id="proyectContent">
+
+
 				   <div id="mediaProyecto">
 	            	  <iframe id="video_clip" src="http://www.youtube.com/embed/kjX-8kQmakk?hd=1&amp;wmode=opaque&amp;autohide=1&amp;showinfo=0" frameborder="0"></iframe>
 	               </div>
+
+
 	               <div id="creadorProyecto">
-	            	   Detalle de contacto y tiempo estimado
+	            	   <div id="creador">
+                           <div id="fotoCreador"></div>
+                           <div id="descripcionCreador"></div>
+	            	   </div>
 	               </div>
 	               <br class="clearBoth">
+
+
 	           	   <div id="detalleProyecto">
-	                  REDES Y VIRALIZACION
+	                  <div id="fb">facebook</div>
+                      <div id="tw">twitter</div>
+                      <div id="url">url</div>
 	               </div>
+
 	               <div id="tituloColaboradores">
 	                 TITULO COLABORADORES
 	               </div>
 				   <br class="clearBoth">
 				   
+
 				   <div id="contenedorDescripcionProyecto">	        
 		              <div id="descripcionProyecto">
        	                DESCRIPCION DE LA IDEA
@@ -605,7 +622,6 @@
 					
 				  <div id="colaboradoresProyecto">
 						<div id="colaborador1">
-                            <div class="flotados"></div>
 							COLABORADOR 1
 						</div>	        
 						<div id="colaborador2">
