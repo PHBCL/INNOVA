@@ -591,9 +591,13 @@
 
 	               <div id="creadorProyecto">
 	            	   <div id="creador">
-                           <div id="fotoCreador"></div>
-                           <div id="descripcionCreador"></div>
+                           <div id="fotoCreador"><input type="image" src="../../imagenes/icons/fralone.jpg" height="100%" width="100%"/></div>
+                           <div id="descripcionCreador">
+                               <p>Proyecto creado por Forever Alone <br />Sitio Web: www.foreveralone.cl</p>
+                           </div>
 	            	   </div>
+                      Este magnifico emprendedor a creado estas ideas!: Velas!
+                       <div id="otrosProyectos">proyectos</div>
 	               </div>
 	               <br class="clearBoth">
 

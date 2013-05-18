@@ -124,12 +124,22 @@
 
 #descripcionCreador 
 {
-    width:120px;
+    width:260px;
 	height:120px;
     margin-top:30px;
 	border:1px solid green;	
     float:left;
 }
+
+
+#otrosProyectos
+{
+    width:400px;
+	height:166px;
+    margin-top:30px;
+	border:1px solid green;	
+}
+
 
 #detalleProyecto
 {
