@@ -4,8 +4,7 @@
      <script  type="text/javascript" src="../../js/login/onp.plugins.min.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="contenido" runat="server">
-    <form id="formularioIngreso" runat="server">
-         <div id="onp-summer-form">	
+          <div id="onp-summer-form">	
                 <ul class="onp-tab-menu">
 		          <li class="onp-first-tabmenu active"><a href="#onp-signin" data-toggle="tab">Sign In</a></li>
 		          <li class="onp-last-tabmenu"><a href="#onp-register" data-toggle="tab">Register</a></li>
@@ -14,11 +13,11 @@
 		        <div class="onp-login-form onp-tab-pane active" id="onp-signin">
 			        <div class="onp-form-side">	
 				        <div class="onp-login-area">
-					        <h4>Login to account <%= this.Context.Items["prueba"] as String  %></h4>
+					        <h4>Login to account</h4>
 					        <form>
 						        <p><label><asp:TextBox ID="txtNombre" placeholder="Usuario" runat="server"></asp:TextBox><span class="onp-warning-text"></span></p>
 						        <p><label><asp:TextBox ID="txtPassword" TextMode="Password" runat="server"></asp:TextBox><span class="onp-warning-text"></span></p>
-						        <asp:button runat="server" type="submit" class="onp-process-btn" Text="Ingresar" OnClick="Unnamed2_Click"></asp:button>					
+						        <asp:button id="btnIngresar" runat="server" type="submit" class="onp-process-btn" Text="Ingresar" OnClick="btnIngresar_Click"></asp:button>					
 					        </form>
 				        </div>
 				        <div class="onp-forgot-login-area">
@@ -34,5 +33,4 @@
 	        </div><!-- end tabcontent -->
           <div class="clearfix"></div>   
         </div><!-- end .onp-summer-form -->
-   </form>
 </asp:Content>

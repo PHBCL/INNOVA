@@ -115,8 +115,11 @@
     <Content Include="imagenes\global\tb.png" />
     <Content Include="imagenes\global\tw.png" />
     <Content Include="imagenes\global\ver-wardrobe.png" />
+    <Content Include="imagenes\icons\Facebook.png" />
     <Content Include="imagenes\icons\glyphicons_039_notes.png" />
     <Content Include="imagenes\icons\glyphicons_039_notes_h.png" />
+    <Content Include="imagenes\icons\Technorati.png" />
+    <Content Include="imagenes\icons\Twitter.png" />
     <Content Include="imagenes\index\carrousel\badge.jpg" />
     <Content Include="imagenes\index\carrousel\btn_dark.png" />
     <Content Include="imagenes\index\carrousel\btn_light.png" />
@@ -251,27 +254,18 @@
     <Content Include="js\menu\custom.js" />
     <Content Include="js\royalslider\jquery.easing-1.3.js" />
     <Content Include="js\royalslider\jquery.royalslider.min.js" />
-    <Content Include="servicios\ServicioLogin.asmx" />
     <Content Include="servicios\ServicioMenu.asmx" />
-    <Content Include="servicios\ServicioProyecto.asmx" />
     <Content Include="vistas\index.aspx" />
+    <Content Include="vistas\listaProyectoPorCategoria.aspx" />
     <Content Include="vistas\login.aspx" />
-    <Content Include="vistas\menu\menu.aspx" />
-    <Content Include="vistas\proyecto\proyecto.aspx" />
+    <Content Include="vistas\menu.aspx" />
+    <Content Include="vistas\proyecto.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="logica\DAO\MenuDAO.cs" />
-    <Compile Include="servicios\ServicioLogin.asmx.cs">
-      <DependentUpon>ServicioLogin.asmx</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="servicios\ServicioMenu.asmx.cs">
       <DependentUpon>ServicioMenu.asmx</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="servicios\ServicioProyecto.asmx.cs">
-      <DependentUpon>ServicioProyecto.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="vistas\Estructura_Sitio.Master.cs">
@@ -296,6 +290,13 @@
     <Compile Include="logica\DAO\LoginDAO.cs" />
     <Compile Include="logica\DTO\UsuarioDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="vistas\listaProyectoPorCategoria.aspx.cs">
+      <DependentUpon>listaProyectoPorCategoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\listaProyectoPorCategoria.aspx.designer.cs">
+      <DependentUpon>listaProyectoPorCategoria.aspx</DependentUpon>
+    </Compile>
     <Compile Include="vistas\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -303,18 +304,18 @@
     <Compile Include="vistas\login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="vistas\menu\menu.aspx.cs">
+    <Compile Include="vistas\menu.aspx.cs">
       <DependentUpon>menu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="vistas\menu\menu.aspx.designer.cs">
+    <Compile Include="vistas\menu.aspx.designer.cs">
       <DependentUpon>menu.aspx</DependentUpon>
     </Compile>
-    <Compile Include="vistas\proyecto\proyecto.aspx.cs">
+    <Compile Include="vistas\proyecto.aspx.cs">
       <DependentUpon>proyecto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="vistas\proyecto\proyecto.aspx.designer.cs">
+    <Compile Include="vistas\proyecto.aspx.designer.cs">
       <DependentUpon>proyecto.aspx</DependentUpon>
     </Compile>
   </ItemGroup>

@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Innova.VISTAS.MENU
+namespace Innova.vistas
 {
-    public partial class Menu : System.Web.UI.Page
+    public partial class listaProyectoPorCategoria : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

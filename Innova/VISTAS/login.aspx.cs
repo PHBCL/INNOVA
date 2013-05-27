@@ -13,11 +13,9 @@ namespace Innova.vistas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
-      
-        protected void Unnamed2_Click(object sender, EventArgs e)
+        protected void btnIngresar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -27,14 +25,18 @@ namespace Innova.vistas
                 if (respuestaValidacion != null)
                 {
                     Session["usuario"] = respuestaValidacion._usuario;
-                    this.Context.Items.Add("prueba", "probando");
+                    Response.Redirect("menu.aspx");
                 }
-                
+
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
         }
+
+      
+      
+       
     }
 }
