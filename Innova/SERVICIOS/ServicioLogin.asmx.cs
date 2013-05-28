@@ -22,28 +22,7 @@ namespace Innova.SERVICIOS
     public class ServicioLogin1 : System.Web.Services.WebService
     {
 
-        [WebMethod(EnableSession=true)]
-        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
-        public UsuarioDTO Login(string usuario, string password)
-        {   
-            try
-            {
-                UsuarioDTO usuarioRegistrar = new UsuarioDTO(usuario, password);
-                LoginDAO usuarioDAO = new LoginDAO();
-                UsuarioDTO respuestaValidacion = usuarioDAO.ValidarUsuario(usuarioRegistrar);
-                if (respuestaValidacion != null)
-                {
-                    Session["usuario"] = respuestaValidacion._usuario;
-                }
-                return respuestaValidacion;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                return null;
-            }
-
-        }
+        
 
     }
 }

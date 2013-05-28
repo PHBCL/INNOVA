@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Innova.ASP.INDEX
+namespace Innova.vistas
 {
-    public partial class index : System.Web.UI.Page
+    public partial class Estructura_Sitio : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

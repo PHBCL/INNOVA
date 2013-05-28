@@ -7,18 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Innova.vistas.login {
+namespace Innova.vistas {
     
     
-    public partial class login {
+    public partial class Estructura_Sitio {
         
         /// <summary>
-        /// Head1 control.
+        /// head control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        
+        /// <summary>
+        /// contenido control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder contenido;
     }
 }

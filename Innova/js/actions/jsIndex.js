@@ -1,6 +1,6 @@
 ﻿function toLogin()
 {
-    window.location.href = "http://localhost:48930/vistas/login/login.aspx";
+    window.location.href = "http://localhost:48930/vistas/login.aspx";
 }
 
 //Inicializacion del panel giratorio.
