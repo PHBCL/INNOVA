@@ -36,9 +36,7 @@
                         Este magnifico emprendedor a creado estas ideas!: Velas!
                        <div id="otrosProyectos">proyectos</div>
 	               </div>
-	               <br class="clearBoth">
-
-
+	               <br class="clearBoth" />
 	           	   <div id="redesSociales">
 	                  <div id="fb">
                             <input id="fbImg" type="image" src="../imagenes/icons/Facebook.png" />
@@ -59,26 +57,32 @@
 
 				   <div id="contenedorDescripcionProyecto">	        
 		              <div id="descripcionProyecto">
-       	                   DESCRIPCION DE LA IDEA
+       	                   <p>DESCRIPCION DE LA IDEA</p><br />
+                           <p>La idea consta en un portal que permita mostrar la idea al mundo tratando de reunir un equipo de trabajo.</p>
        	              </div>
-                      <div id="proyeccionProyecto">
-       			   		   LOGROS A FUTURO
-       			      </div>
 	               </div>
 
 					
 				  <div id="colaboradoresProyecto">
 						<div id="colaborador1">
-							COLABORADOR 1
+                            <br />
+							<p align="left">Desarrolador Java</p>15% de participacion en el proyecto<br />
+                            <p>Desarrollador Java con experiencia en j2EE, Struts MVC,etc...  </p>
 						</div>	        
 						<div id="colaborador2">
-							COLABORADOR 2
+							<br />
+							<p align="left">Desarrolador Java</p>15% de participacion en el proyecto<br />
+                            <p>Desarrollador Java con experiencia en j2EE, Struts MVC,etc...  </p>
 						</div>	                 	
 						<div id="colaborador3">
-							COLABORADOR 3
+							<br />
+							<p align="left">Desarrolador Java</p>15% de participacion en el proyecto<br />
+                            <p>Desarrollador Java con experiencia en j2EE, Struts MVC,etc...  </p>
 						</div>	                 	
 						<div id="colaborador4">
-							COLABORADOR 4
+							<br />
+							<p align="left">Desarrolador Java</p>15% de participacion en el proyecto<br />
+                            <p>Desarrollador Java con experiencia en j2EE, Struts MVC,etc...  </p>
 						</div>	              	
        			   </div>
 				   <br class="clearBoth">

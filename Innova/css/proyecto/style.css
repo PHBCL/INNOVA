@@ -87,11 +87,15 @@
 #creadorProyecto
 {
     margin-top:20px;
-	width:400px;
+    width:410px;
 	height:450px;
 	margin-left:20px;
 	background-color:#FDE0E0;
 	float:left;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
 }
 
 #creador 
@@ -124,18 +128,18 @@
 {
     width:400px;
 	height:166px;
-    margin-top:30px;
+	margin-left:3px;
+    margin-top:5px;
 	border:1px solid green;	
 }
 
 
 #redesSociales
 {
-    margin-top:20px;
+    margin-top:30px;
 	width:600px;
 	height:50px;
     background-color:#FFFFCC;
-	margin-top:3px;
 	margin-left:50px;
 	float:left;
 }
@@ -191,11 +195,10 @@
 
 #contenedorDescripcionProyecto
 {
+    margin-top:20px;
 	width:600px;
-	height:838px;
-	margin-top:10px;
+	height:800px;
 	margin-left:50px;
-	border:1px solid red;	
 	float:left;
 }
 
@@ -203,17 +206,9 @@
 #descripcionProyecto
 {
 	width:600px;
-	height:414px;
-	border:1px solid green;
+	height:800px;
 }
 
-#proyeccionProyecto
-{
-	width:600px;
-	height:420px;
-	border:1px solid green;
-
-}
 
 #tituloColaboradores
 {
