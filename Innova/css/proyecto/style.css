@@ -1,5 +1,9 @@
 ﻿.clearBoth { clear:both; }/*reinicia la grafica para que pueda ser considerado despues dejando de lado el float */
-
+#separador {
+    margin-left:7px;
+    width:95%;
+	border:1px solid gray;	
+}
 #cabeceraProyecto
 {
     margin-top:50px;
@@ -57,8 +61,8 @@
 #body
 {
 	width:1100px;
-	height:1450px;
-	background-color:white;
+	height:1800px;
+	background-color:#FAFFFF;
     border-top-left-radius:10px;
     border-top-right-radius:10px;
     border-bottom-left-radius:10px;
@@ -73,11 +77,16 @@
 
 #mediaProyecto
 {
+	width:550px;
+	height:435px;
     margin-top:20px;
-	width:600px;
-	height:450px;
     margin-left:50px;
     float:left;	
+    border: 9px solid rgb(245, 211, 211);
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
 }
 #video_clip 
 {
@@ -90,7 +99,7 @@
     width:410px;
 	height:450px;
 	margin-left:20px;
-	background-color:#FDE0E0;
+	background-color:#E6E6FF;
 	float:left;
     border-top-left-radius:10px;
     border-top-right-radius:10px;
@@ -122,6 +131,11 @@
 	border:1px solid green;	
     float:left;
 }
+#contenidoCreador
+{
+    margin-left:10px;
+    margin-top:20px;
+}
 
 
 #otrosProyectos
@@ -136,10 +150,10 @@
 
 #redesSociales
 {
-    margin-top:30px;
+    margin-top:10px;
 	width:600px;
 	height:50px;
-    background-color:#FFFFCC;
+    background-color:#FAFFFF;
 	margin-left:50px;
 	float:left;
 }
@@ -173,7 +187,7 @@
 
 #url
 {
-    width:300px;
+    width:480px;
 	height:40px;
     margin-left:5px;
     float:left;
@@ -185,8 +199,9 @@
     float:left;
 }
 
-#urlTxt 
+#txtVRL 
 {
+     margin-top:10px;
      margin-left:10px;
      float:left;
 }
@@ -200,8 +215,15 @@
 	height:800px;
 	margin-left:50px;
 	float:left;
+    font-family: 'Domine', serif;   
 }
 
+#contenedorDescripcionProyecto #titulo {
+    font-size:20px; 
+}
+#contenedorDescripcionProyecto #cuerpo {
+    font-size:12px; 
+}
 
 #descripcionProyecto
 {
@@ -217,8 +239,12 @@
 	margin-top:3px;
 	margin-left:20px;
 	float:left;
-    font-family: 'Merriweather', serif;
+    font-family: 'Domine', serif;   
     font-size:24px;
+}
+#tituloColaboradores #tituloCol 
+{
+       margin-top:15px;
 }
 
 #colaboradoresProyecto
@@ -231,45 +257,203 @@
 }
 
 
+/*   Colaborador 1    */
 #colaborador1
 {
     margin-top:10px;
 	width:auto;
-	height:200px;
-    background-color:lightgray;	
+	height:300px;
+    background-color:lightgray;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
 }
 
-#colaborador1:hover 
+#colaborador1 #contenidoColaborador1
 {
-    opacity: 0.6;
-    background-color:grey;
+     width:auto;
+     height:83%;
+     margin-left:  5px;
+     font-family: 'Domine', serif;   
 }
+
+#colaborador1 #contenidoColaborador1 #tituloColaborador1
+{
+     font-size:16px;
+}
+
+#colaborador1 #contenidoColaborador1 #porcentajeColaborador1
+{
+     font-size:13px;
+}
+
+#colaborador1 #contenidoColaborador #descripcionCargo1
+{
+     margin-top:10px;
+     font-size:13px;
+}
+
+#colaborador1  #accionColaborador1
+{
+    width:100%;
+    height:50px;    
+}
+#colaborador1  #accionPostular1
+{
+    width:100%;
+    height:100%;
+}
+/*   fin Colaborador 1    */
+
+/*   Colaborador 2    */
 #colaborador2
 {
+    margin-top:10px;
 	width:auto;
-	height:200px;
-	border-top:1px solid gray;
+	height:300px;
     background-color:lightgray;
-}
-#colaborador2:hover 
-{
-    opacity: 0.6;
-    background-color:grey;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
 }
 
+#colaborador2 #contenidoColaborador2
+{
+     width:auto;
+     height:83%;
+     margin-left:  5px;
+     font-family: 'Domine', serif;   
+}
+
+#colaborador2 #contenidoColaborador2 #tituloColaborador2
+{
+     font-size:16px;
+}
+
+#colaborador2 #contenidoColaborador2 #porcentajeColaborador2
+{
+     font-size:13px;
+}
+
+#colaborador2 #contenidoColaborador #descripcionCargo2
+{
+     margin-top:10px;
+     font-size:13px;
+}
+
+#colaborador2  #accionColaborado2
+{
+    width:100%;
+    height:50px;    
+}
+#colaborador2  #accionPostular2
+{
+    width:100%;
+    height:100%;
+}
+/*   fin Colaborador 2    */
+
+/*   Colaborador 3    */
 #colaborador3
 {
+    margin-top:10px;
 	width:auto;
-	height:200px;
-	border-top:1px solid gray;	
+	height:300px;
     background-color:lightgray;
-}
-#colaborador3:hover 
-{
-    opacity: 0.6;
-    background-color:grey;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
 }
 
+#colaborador3 #contenidoColaborador3
+{
+     width:auto;
+     height:83%;
+     margin-left:  5px;
+     font-family: 'Domine', serif;   
+}
+
+#colaborador3 #contenidoColaborador3 #tituloColaborador3
+{
+     font-size:16px;
+}
+
+#colaborador3 #contenidoColaborador3 #porcentajeColaborador3
+{
+     font-size:13px;
+}
+
+#colaborador3 #contenidoColaborador #descripcionCargo3
+{
+     margin-top:10px;
+     font-size:13px;
+}
+
+#colaborador3  #accionColaborador3
+{
+    width:100%;
+    height:50px;    
+}
+#colaborador3  #accionPostular3
+{
+    width:100%;
+    height:100%;
+}
+/*   fin Colaborador 3   */
+
+/*   Colaborador 4    */
+#colaborador4
+{
+    margin-top:10px;
+	width:auto;
+	height:300px;
+    background-color:lightgray;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;	
+}
+
+#colaborador4 #contenidoColaborador4
+{
+     width:auto;
+     height:83%;
+     margin-left:  5px;
+     font-family: 'Domine', serif;   
+}
+
+#colaborador4 #contenidoColaborador4 #tituloColaborador4
+{
+     font-size:16px;
+}
+
+#colaborador4 #contenidoColaborador4 #porcentajeColaborador4
+{
+     font-size:13px;
+}
+
+#colaborador4 #contenidoColaborador #descripcionCargo4
+{
+     margin-top:10px;
+     font-size:13px;
+}
+
+#colaborador4  #accionColaborador4
+{
+    width:100%;
+    height:50px;    
+}
+#colaborador4  #accionPostular4
+{
+    width:100%;
+    height:100%;
+}
+/*   fin Colaborador 4    */
+
+/**
 #colaborador4
 {
 	width:auto;
@@ -282,6 +466,7 @@
     opacity: 0.6;
     background-color:grey;
 }
+    **/
 
 
 #consultasProyecto

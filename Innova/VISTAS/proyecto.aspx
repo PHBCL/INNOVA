@@ -1,8 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/vistas/Estructura_Sitio.Master" AutoEventWireup="true" CodeBehind="proyecto.aspx.cs" Inherits="Innova.vistas.proyecto" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href='http://fonts.googleapis.com/css?family=Noto+Serif' rel='stylesheet' type='text/css' />
-    <link href='http://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css' />
-    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Domine' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../../css/proyecto/style.css"  />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="contenido" runat="server">
@@ -26,7 +24,7 @@
 	            	   <div id="creador">
                            <div id="fotoCreador"><input type="image" src="../../imagenes/icons/fralone.jpg" height="100%" width="100%"/></div>
                            <div id="descripcionCreador">
-                               <p>Proyecto creado por Forever Alone <br />
+                              <p id="contenidoCreador">Proyecto creado por Forever Alone <br />
                                    Sitio Web: www.foreveralone.cl<br />
                                    Facebook:fb.com/frvAlone<br />
                                    Twitter: tw.com/frvAlone
@@ -45,51 +43,50 @@
                           <input id="twImg" type="image" src="../imagenes/icons/Twitter.png" />
                       </div>
                       <div id="url"><input id="urlImg" type="image" src="../imagenes/icons/Technorati.png" />
-                          <p align="left"><asp:TextBox ID="urlTxt" Text="http://localhost:48930/vistas/proyecto.aspx" runat="server" width="230px"></asp:TextBox></p>
+                          <span id="txtVRL"><asp:TextBox ID="urlTxt" Text="http://localhost:48930/vistas/proyecto.aspx" runat="server" width="280px" ></asp:TextBox></span>
                       </div>
 	               </div>
 
 	               <div id="tituloColaboradores">
-	                    <p align="center"> Colaboradores </p>
+	                    <p id="tituloCol" align="center">  Para realizar este proyecto necesito:  </p>
 	               </div>
 				   <br class="clearBoth">
 				   
 
 				   <div id="contenedorDescripcionProyecto">	        
 		              <div id="descripcionProyecto">
-       	                   <p>DESCRIPCION DE LA IDEA</p><br />
-                           <p>La idea consta en un portal que permita mostrar la idea al mundo tratando de reunir un equipo de trabajo.</p>
+       	                   <span id="titulo">DESCRIPCION DE LA IDEA</span>
+                           <p id="cuerpo">La idea consta en un portal que permita mostrar la idea al mundo tratando de reunir un equipo de trabajo.</p>
        	              </div>
 	               </div>
 
 					
 				  <div id="colaboradoresProyecto">
-						<div id="colaborador1">
-                            <br />
-							<p align="left">Desarrolador Java</p>15% de participacion en el proyecto<br />
-                            <p>Desarrollador Java con experiencia en j2EE, Struts MVC,etc...  </p>
-						</div>	        
-						<div id="colaborador2">
-							<br />
-							<p align="left">Desarrolador Java</p>15% de participacion en el proyecto<br />
-                            <p>Desarrollador Java con experiencia en j2EE, Struts MVC,etc...  </p>
-						</div>	                 	
-						<div id="colaborador3">
-							<br />
-							<p align="left">Desarrolador Java</p>15% de participacion en el proyecto<br />
-                            <p>Desarrollador Java con experiencia en j2EE, Struts MVC,etc...  </p>
-						</div>	                 	
-						<div id="colaborador4">
-							<br />
-							<p align="left">Desarrolador Java</p>15% de participacion en el proyecto<br />
-                            <p>Desarrollador Java con experiencia en j2EE, Struts MVC,etc...  </p>
-						</div>	              	
+                      <%for(int i=1;i<5;i++){ %>
+						<div id="colaborador<%=i%>">
+                            <div id="contenidoColaborador<%=i%>">
+                                <br />
+                                <span id="tituloColaborador<%=i%>"><strong>Desarrollador Java</strong></span><br />
+                                <span id="porcentajeColaborador<%=i%>">15% de el proyecto</span><br />
+                                <div id="separador"></div>
+                                <br />
+                                <p id="descripcionCargo<%=i%>">Desarrollador Java con experiencia en j2EE, Struts MVC,etc...  </p> 
+                            </div>
+                             <div id="accionColaborado<%=i%>">
+                                    <div id="accionPostular<%=i%>" align="center" >
+                                        <%String usuario = Session["usuario"] as String;
+                                          if(usuario!=null){%>
+                                            <button class="btn btn-medium btn-block btn-primary" type="button">Postular!</button>
+                                            <%}else{%>  
+                                              <asp:Button id="btnRegistrarte" CssClass="btn btn-medium btn-block btn-primary" Text="Debes estar registrado para postular!" runat="server" OnClick="btnRegistrarte_Click" />
+                                            <%} %>
+                                         <span><%=i%> persona<%if(i>1){ %>s<%} %> ya han postulado a este puesto!</span>
+                                    </div>
+                             </div>
+                        </div>
+                      <%} %>
        			   </div>
-				   <br class="clearBoth">
+				   <br class="clearBoth" />
        			 </div>       
                </div>
-            </div>
-            <!-- #fin container -->
-            </div>
-            <!-- #fin wrapper -->
 </asp:Content>

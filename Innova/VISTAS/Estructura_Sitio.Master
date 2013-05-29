@@ -49,6 +49,8 @@
     <link rel="stylesheet" type="text/css" href="../../css/index/style.css" />
     <link rel="stylesheet" type="text/css" href="../../css/index/settings.css" />
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css' />
+    
+    <link rel="stylesheet" href="../css/global/bootstrap.min.css"  />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
