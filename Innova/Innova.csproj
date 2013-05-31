@@ -75,6 +75,7 @@
     <Content Include="css\index\prettyPhoto.css" />
     <Content Include="css\index\settings.css" />
     <Content Include="css\index\style.css" />
+    <Content Include="css\login\estilo.css" />
     <Content Include="css\login\summer.theme-ie.css" />
     <Content Include="css\login\summer.theme.css" />
     <Content Include="css\menu\style.css" />

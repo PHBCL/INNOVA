@@ -25,7 +25,7 @@ namespace Innova.vistas
                 if (respuestaValidacion != null)
                 {
                     Session["usuario"] = respuestaValidacion._usuario;
-                    Response.Redirect("menu.aspx");
+                    Response.Redirect("index.aspx");
                 }
 
             }

@@ -21,8 +21,8 @@
 <body onload="ObtenerDatos();">
   <div class="sidebar">
 	<div class="search">
-	    <font color="white">Bienvenido :  <%= this.Context.Items["usuario"] as String  %></font> 
-	</div>
+	    <font color="white">Bienvenido :  <%= this.Context.Items["usuario"] as String  %></font>
+    </div>
 	<ul id="menu">
 		
 	</ul>
@@ -61,6 +61,8 @@
     </div>
 </div> 
     
-
+<form id="form1" runat="server">
+        <asp:Button ID="btnSalir" runat="server" OnClick="btnSalir_Click"  style="visibility: hidden; display: none;"/>
+</form>
 </body>
 </html>

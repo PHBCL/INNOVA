@@ -38,5 +38,43 @@ namespace Innova.vistas
             }
         }
 
+        protected void lnkSalir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Session.Clear();
+                Session.Abandon();
+                Response.Redirect("index.aspx");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        protected void btnCrearCuenta_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Response.Redirect("login.aspx");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Response.Redirect("login.aspx");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
     }
 }

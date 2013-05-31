@@ -24,12 +24,17 @@ function ObtenerDatos()
                 texto += '<li><a href="#" onclick="cambiarContenido();">Mensajes Eliminados</a></li>';
                 texto += '</ul>';
                 texto += '</li>';
-                texto += '<li><a href="#" onclick="cambiarContenido(' + "'" + "configuracion" + "'" +' );">Configuracion</a></li>';
+                texto += '<li><a href="#" onclick="cambiarContenido(' + "'" + "configuracion" + "'" + ' );">Configuracion</a></li>';
+                texto += '<li><a href="#" onclick="salir()">Salir</a></li>';
                 document.getElementById('menu').innerHTML = texto;
         }
     });
-   
     $("head").append($('<link type="text/css" rel="stylesheet" href="../../css/menu/style.css" media="all" />'));
+}
+
+function salir()
+{
+    document.getElementById("btnSalir").click();
 }
 
 

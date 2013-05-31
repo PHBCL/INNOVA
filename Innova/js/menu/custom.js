@@ -8,6 +8,7 @@ $(document).ready(function() {
 	$("ul li a:contains('History')").addClass("history").attr('title', 'History');
 	$("ul li a:contains('Messages')").addClass("messages").attr('title', 'Messages');
 	$("ul li a:contains('Settings')").addClass("settings").attr('title', 'Settings');
+
 	
 	// Add class to last list item of submenu
 	

@@ -1,8 +1,4 @@
-﻿function toLogin()
-{
-    window.location.href = "http://localhost:48930/vistas/login.aspx";
-}
-
+﻿
 //Inicializacion del panel giratorio.
 jQuery(document).ready(function ($) {
     $('#slider-with-blocks-1').royalSlider({

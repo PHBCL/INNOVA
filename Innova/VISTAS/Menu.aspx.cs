@@ -21,5 +21,20 @@ namespace Innova.VISTAS.MENU
                 Console.Write(ex.Message);
             }
         }
+
+        protected void btnSalir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Session.Clear();
+                Session.Abandon();
+                Response.Redirect("index.aspx");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
     }
 }
