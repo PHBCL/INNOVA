@@ -29,5 +29,22 @@ namespace Innova.logica.DAO
                 throw ex;
             }
         }
+
+        public Boolean agregarProyecto(PROYECTO proyecto)
+        {
+            try
+            {
+                using (InnovaDataClassesDataContext db = new InnovaDataClassesDataContext())
+                {
+                    db.PROYECTOs.InsertOnSubmit(proyecto);
+                    db.SubmitChanges();
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

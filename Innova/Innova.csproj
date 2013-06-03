@@ -272,6 +272,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="logica\DAO\MenuDAO.cs" />
+    <Compile Include="logica\util\Util.cs" />
     <Compile Include="servicios\ServicioMenu.asmx.cs">
       <DependentUpon>ServicioMenu.asmx</DependentUpon>
       <SubType>Component</SubType>

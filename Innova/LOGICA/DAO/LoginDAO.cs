@@ -22,6 +22,13 @@ namespace Innova.DAO
                     {
                         usuario._usuario = resp.USUARIO1;
                         usuario._password = resp.PASSWORD;
+                        usuario._idUsuario = resp.ID_USUARIO;
+                        usuario._apellidoPaterno = resp.APELLIDO_PATERNO;
+                        usuario._apellidoMaterno = resp.APELLIDO_MATERNO;
+                        usuario._email = resp.EMAIL;
+                        usuario._fechaNacimiento = resp.FECHA_NACIMIENTO;
+                        usuario._nombre = resp.NOMBRE;
+                        usuario._profesion = resp.PROFESIONE.NOMBRE_PROFESION;
                         return usuario;
                     }
                     else

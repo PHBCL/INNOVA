@@ -5,13 +5,6 @@
     <script type="text/javascript" src="../../js/index/jquery.mousewheel.js"></script>
     <script type="text/javascript" src="../../js/index/jquery.thumbGallery.min.js"></script>
     <script type="text/javascript" src="../../js/index/jquery.themepunch.services.min.js"></script>
-    <script type="text/javascript">
-        tpj(document).ready(function () {
-            tpj(".fancybox").fancybox({
-
-            });
-        });
-    </script>
     <link rel="stylesheet" type="text/css" href="../../css/index/style.css" />
     <link rel="stylesheet" type="text/css" href="../../css/index/settings.css" />
 </asp:Content>

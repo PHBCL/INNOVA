@@ -7,19 +7,31 @@
              <div class="control-group">
                 <label class="control-label">Nombre Idea</label>
                 <div class="controls">
-                  <input type="text" id="n_proyecto" placeholder="Nombre Proyecto">
+                   <asp:TextBox ID="txtNombreIdea" placeholder="Nombre Proyecto" style="width:450px;" runat="server"></asp:TextBox>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label">Descripcion Corta Idea</label>
+                <div class="controls">
+                   <asp:TextBox ID="txtDescripcionCorta" placeholder="Descripcion Corta" style="width:450px;" runat="server"></asp:TextBox>
                 </div>
               </div>
              <div class="control-group">
-                <label class="control-label">Descripcion Corta Idea</label>
+                <label class="control-label">Url Video:</label>
                 <div class="controls">
-                  <input type="text" id="n_descripcion_corta" placeholder="Descripcion Corta">
+                    <asp:TextBox ID="txtUrl" placeholder="Url Video" style="width:450px;" runat="server"></asp:TextBox>
+                </div>
+              </div>    
+            <div class="control-group">
+                <label class="control-label">Descripcion Proyecto:</label>
+                <div class="controls">
+                    <asp:TextBox TextMode="multiline" ID="txtDescripcionLarga" rows="3" style="width:450px;" runat="server"></asp:TextBox>
                 </div>
               </div>
-
-               <div class="form-actions">
-                  <button type="submit" class="btn btn-primary">Guardar</button>
-                  <button type="button" class="btn">Cancelar</button>
-                </div>
+              
+             <div class="form-actions">
+                  <asp:Button ID="btnGrabar" runat="server" CssClass="btn btn-primary" Text="Crear Proyecto" OnClick="btnGrabar_Click" />
+                  <asp:Button ID="btnCancelar" runat="server" CssClass="btn" Text="Cancelar" OnClick="btnCancelar_Click" />
+             </div>
     </div>
 </asp:Content>

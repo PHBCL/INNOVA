@@ -63,15 +63,15 @@ namespace Innova.logica.bdd
     partial void InsertPROFESIONE(PROFESIONE instance);
     partial void UpdatePROFESIONE(PROFESIONE instance);
     partial void DeletePROFESIONE(PROFESIONE instance);
-    partial void InsertPROYECTO(PROYECTO instance);
-    partial void UpdatePROYECTO(PROYECTO instance);
-    partial void DeletePROYECTO(PROYECTO instance);
     partial void InsertROLE(ROLE instance);
     partial void UpdateROLE(ROLE instance);
     partial void DeleteROLE(ROLE instance);
     partial void InsertUSUARIO(USUARIO instance);
     partial void UpdateUSUARIO(USUARIO instance);
     partial void DeleteUSUARIO(USUARIO instance);
+    partial void InsertPROYECTO(PROYECTO instance);
+    partial void UpdatePROYECTO(PROYECTO instance);
+    partial void DeletePROYECTO(PROYECTO instance);
     #endregion
 		
 		public InnovaDataClassesDataContext() : 
@@ -200,14 +200,6 @@ namespace Innova.logica.bdd
 			}
 		}
 		
-		public System.Data.Linq.Table<PROYECTO> PROYECTOs
-		{
-			get
-			{
-				return this.GetTable<PROYECTO>();
-			}
-		}
-		
 		public System.Data.Linq.Table<ROLE> ROLEs
 		{
 			get
@@ -229,6 +221,14 @@ namespace Innova.logica.bdd
 			get
 			{
 				return this.GetTable<MENSAJE>();
+			}
+		}
+		
+		public System.Data.Linq.Table<PROYECTO> PROYECTOs
+		{
+			get
+			{
+				return this.GetTable<PROYECTO>();
 			}
 		}
 	}
@@ -1170,8 +1170,6 @@ namespace Innova.logica.bdd
 		
 		private int _DESCRIPCION;
 		
-		private EntityRef<PROYECTO> _PROYECTO;
-		
 		private EntityRef<ROLE> _ROLE;
 		
 		private EntityRef<USUARIO> _USUARIO;
@@ -1198,7 +1196,6 @@ namespace Innova.logica.bdd
 		
 		public EXP_EMPRENDEDORE()
 		{
-			this._PROYECTO = default(EntityRef<PROYECTO>);
 			this._ROLE = default(EntityRef<ROLE>);
 			this._USUARIO = default(EntityRef<USUARIO>);
 			OnCreated();
@@ -1275,10 +1272,6 @@ namespace Innova.logica.bdd
 			{
 				if ((this._ID_PROYECTO != value))
 				{
-					if (this._PROYECTO.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.OnID_PROYECTOChanging(value);
 					this.SendPropertyChanging();
 					this._ID_PROYECTO = value;
@@ -1352,40 +1345,6 @@ namespace Innova.logica.bdd
 					this._DESCRIPCION = value;
 					this.SendPropertyChanged("DESCRIPCION");
 					this.OnDESCRIPCIONChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="PROYECTO_EXP_EMPRENDEDORE", Storage="_PROYECTO", ThisKey="ID_PROYECTO", OtherKey="ID_PROYECTO", IsForeignKey=true)]
-		public PROYECTO PROYECTO
-		{
-			get
-			{
-				return this._PROYECTO.Entity;
-			}
-			set
-			{
-				PROYECTO previousValue = this._PROYECTO.Entity;
-				if (((previousValue != value) 
-							|| (this._PROYECTO.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._PROYECTO.Entity = null;
-						previousValue.EXP_EMPRENDEDOREs.Remove(this);
-					}
-					this._PROYECTO.Entity = value;
-					if ((value != null))
-					{
-						value.EXP_EMPRENDEDOREs.Add(this);
-						this._ID_PROYECTO = value.ID_PROYECTO;
-					}
-					else
-					{
-						this._ID_PROYECTO = default(Nullable<int>);
-					}
-					this.SendPropertyChanged("PROYECTO");
 				}
 			}
 		}
@@ -2600,144 +2559,6 @@ namespace Innova.logica.bdd
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PROYECTOS")]
-	public partial class PROYECTO : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _ID_PROYECTO;
-		
-		private string _NOMBRE_PROYECTO;
-		
-		private string _DESCRIPCION_PROYECTO;
-		
-		private EntitySet<EXP_EMPRENDEDORE> _EXP_EMPRENDEDOREs;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnID_PROYECTOChanging(int value);
-    partial void OnID_PROYECTOChanged();
-    partial void OnNOMBRE_PROYECTOChanging(string value);
-    partial void OnNOMBRE_PROYECTOChanged();
-    partial void OnDESCRIPCION_PROYECTOChanging(string value);
-    partial void OnDESCRIPCION_PROYECTOChanged();
-    #endregion
-		
-		public PROYECTO()
-		{
-			this._EXP_EMPRENDEDOREs = new EntitySet<EXP_EMPRENDEDORE>(new Action<EXP_EMPRENDEDORE>(this.attach_EXP_EMPRENDEDOREs), new Action<EXP_EMPRENDEDORE>(this.detach_EXP_EMPRENDEDOREs));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_PROYECTO", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int ID_PROYECTO
-		{
-			get
-			{
-				return this._ID_PROYECTO;
-			}
-			set
-			{
-				if ((this._ID_PROYECTO != value))
-				{
-					this.OnID_PROYECTOChanging(value);
-					this.SendPropertyChanging();
-					this._ID_PROYECTO = value;
-					this.SendPropertyChanged("ID_PROYECTO");
-					this.OnID_PROYECTOChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE_PROYECTO", DbType="VarChar(100)")]
-		public string NOMBRE_PROYECTO
-		{
-			get
-			{
-				return this._NOMBRE_PROYECTO;
-			}
-			set
-			{
-				if ((this._NOMBRE_PROYECTO != value))
-				{
-					this.OnNOMBRE_PROYECTOChanging(value);
-					this.SendPropertyChanging();
-					this._NOMBRE_PROYECTO = value;
-					this.SendPropertyChanged("NOMBRE_PROYECTO");
-					this.OnNOMBRE_PROYECTOChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DESCRIPCION_PROYECTO", DbType="VarChar(MAX)")]
-		public string DESCRIPCION_PROYECTO
-		{
-			get
-			{
-				return this._DESCRIPCION_PROYECTO;
-			}
-			set
-			{
-				if ((this._DESCRIPCION_PROYECTO != value))
-				{
-					this.OnDESCRIPCION_PROYECTOChanging(value);
-					this.SendPropertyChanging();
-					this._DESCRIPCION_PROYECTO = value;
-					this.SendPropertyChanged("DESCRIPCION_PROYECTO");
-					this.OnDESCRIPCION_PROYECTOChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="PROYECTO_EXP_EMPRENDEDORE", Storage="_EXP_EMPRENDEDOREs", ThisKey="ID_PROYECTO", OtherKey="ID_PROYECTO")]
-		public EntitySet<EXP_EMPRENDEDORE> EXP_EMPRENDEDOREs
-		{
-			get
-			{
-				return this._EXP_EMPRENDEDOREs;
-			}
-			set
-			{
-				this._EXP_EMPRENDEDOREs.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_EXP_EMPRENDEDOREs(EXP_EMPRENDEDORE entity)
-		{
-			this.SendPropertyChanging();
-			entity.PROYECTO = this;
-		}
-		
-		private void detach_EXP_EMPRENDEDOREs(EXP_EMPRENDEDORE entity)
-		{
-			this.SendPropertyChanging();
-			entity.PROYECTO = null;
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ROLES")]
 	public partial class ROLE : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -3504,6 +3325,212 @@ namespace Innova.logica.bdd
 				{
 					this._ID_RECEPTOR = value;
 				}
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.PROYECTOS")]
+	public partial class PROYECTO : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _ID_PROYECTO;
+		
+		private string _NOMBRE_PROYECTO;
+		
+		private string _DESCRIPCION_CORTA;
+		
+		private string _DESCRIPCION_PROYECTO;
+		
+		private string _URL_VIDEO;
+		
+		private System.Nullable<System.DateTime> _FECHA_INGRESO;
+		
+		private System.Nullable<int> _ID_USUARIO;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnID_PROYECTOChanging(int value);
+    partial void OnID_PROYECTOChanged();
+    partial void OnNOMBRE_PROYECTOChanging(string value);
+    partial void OnNOMBRE_PROYECTOChanged();
+    partial void OnDESCRIPCION_CORTAChanging(string value);
+    partial void OnDESCRIPCION_CORTAChanged();
+    partial void OnDESCRIPCION_PROYECTOChanging(string value);
+    partial void OnDESCRIPCION_PROYECTOChanged();
+    partial void OnURL_VIDEOChanging(string value);
+    partial void OnURL_VIDEOChanged();
+    partial void OnFECHA_INGRESOChanging(System.Nullable<System.DateTime> value);
+    partial void OnFECHA_INGRESOChanged();
+    partial void OnID_USUARIOChanging(System.Nullable<int> value);
+    partial void OnID_USUARIOChanged();
+    #endregion
+		
+		public PROYECTO()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_PROYECTO", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int ID_PROYECTO
+		{
+			get
+			{
+				return this._ID_PROYECTO;
+			}
+			set
+			{
+				if ((this._ID_PROYECTO != value))
+				{
+					this.OnID_PROYECTOChanging(value);
+					this.SendPropertyChanging();
+					this._ID_PROYECTO = value;
+					this.SendPropertyChanged("ID_PROYECTO");
+					this.OnID_PROYECTOChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NOMBRE_PROYECTO", DbType="VarChar(100)")]
+		public string NOMBRE_PROYECTO
+		{
+			get
+			{
+				return this._NOMBRE_PROYECTO;
+			}
+			set
+			{
+				if ((this._NOMBRE_PROYECTO != value))
+				{
+					this.OnNOMBRE_PROYECTOChanging(value);
+					this.SendPropertyChanging();
+					this._NOMBRE_PROYECTO = value;
+					this.SendPropertyChanged("NOMBRE_PROYECTO");
+					this.OnNOMBRE_PROYECTOChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DESCRIPCION_CORTA", DbType="VarChar(100)")]
+		public string DESCRIPCION_CORTA
+		{
+			get
+			{
+				return this._DESCRIPCION_CORTA;
+			}
+			set
+			{
+				if ((this._DESCRIPCION_CORTA != value))
+				{
+					this.OnDESCRIPCION_CORTAChanging(value);
+					this.SendPropertyChanging();
+					this._DESCRIPCION_CORTA = value;
+					this.SendPropertyChanged("DESCRIPCION_CORTA");
+					this.OnDESCRIPCION_CORTAChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DESCRIPCION_PROYECTO", DbType="VarChar(MAX)")]
+		public string DESCRIPCION_PROYECTO
+		{
+			get
+			{
+				return this._DESCRIPCION_PROYECTO;
+			}
+			set
+			{
+				if ((this._DESCRIPCION_PROYECTO != value))
+				{
+					this.OnDESCRIPCION_PROYECTOChanging(value);
+					this.SendPropertyChanging();
+					this._DESCRIPCION_PROYECTO = value;
+					this.SendPropertyChanged("DESCRIPCION_PROYECTO");
+					this.OnDESCRIPCION_PROYECTOChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_URL_VIDEO", DbType="VarChar(150)")]
+		public string URL_VIDEO
+		{
+			get
+			{
+				return this._URL_VIDEO;
+			}
+			set
+			{
+				if ((this._URL_VIDEO != value))
+				{
+					this.OnURL_VIDEOChanging(value);
+					this.SendPropertyChanging();
+					this._URL_VIDEO = value;
+					this.SendPropertyChanged("URL_VIDEO");
+					this.OnURL_VIDEOChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FECHA_INGRESO", DbType="DateTime")]
+		public System.Nullable<System.DateTime> FECHA_INGRESO
+		{
+			get
+			{
+				return this._FECHA_INGRESO;
+			}
+			set
+			{
+				if ((this._FECHA_INGRESO != value))
+				{
+					this.OnFECHA_INGRESOChanging(value);
+					this.SendPropertyChanging();
+					this._FECHA_INGRESO = value;
+					this.SendPropertyChanged("FECHA_INGRESO");
+					this.OnFECHA_INGRESOChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ID_USUARIO", DbType="Int")]
+		public System.Nullable<int> ID_USUARIO
+		{
+			get
+			{
+				return this._ID_USUARIO;
+			}
+			set
+			{
+				if ((this._ID_USUARIO != value))
+				{
+					this.OnID_USUARIOChanging(value);
+					this.SendPropertyChanging();
+					this._ID_USUARIO = value;
+					this.SendPropertyChanged("ID_USUARIO");
+					this.OnID_USUARIOChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}

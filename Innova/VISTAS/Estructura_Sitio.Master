@@ -50,7 +50,7 @@
                                      <img src="images/logo.png" />
                             </div>
                             <%
-                               String usuario=this.Context.Items["usuario"] as String;
+                               Innova.DTO.UsuarioDTO usuario = this.Context.Items["usuario"] as Innova.DTO.UsuarioDTO;
                                if(usuario == null)
                                {   
                             %>
@@ -98,7 +98,7 @@
                              %>
                              <div id="contenedor-registro" >
                                <div class="btn-group" style="margin-top:10px;margin-left:5px;">
-                                    <label id="tituloBienvenido">Bienvenido, <%= usuario %></label><br />
+                                    <label id="tituloBienvenido">Bienvenido, <%= usuario._nombre%></label><br />
                                     <asp:LinkButton ID="lnkSalir" runat="server" OnClick="lnkSalir_Click" >Salir</asp:LinkButton>
                                 </div>
                             </div>
@@ -284,7 +284,7 @@
              
              <asp:ContentPlaceHolder ID="contenido" runat="server">
         
-                </asp:ContentPlaceHolder>
+             </asp:ContentPlaceHolder>
           
         </div>
      </div>

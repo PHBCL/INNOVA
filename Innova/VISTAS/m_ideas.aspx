@@ -126,16 +126,15 @@
 		                            </tr>
 	                            </thead>
 	                            <tbody>
-                                    <%for(int i=0;i<99;i++){ %>
+                                    <%for(int i=0;i<10;i++){ %>
 		                            <tr class="odd gradeX">
 			                            <td>Trident</td>
 			                            <td>Internet Explorer <%=i%></td>
 			                            <td>Win 95+</td>
 			                            <td class="center">
-                                            <a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal</a>
-                                            <asp:Button ID="btnEditar" CssClass="btn btn-warning" Text="Editar" runat="server" />
-                                            <asp:Button ID="btnEliminar" CssClass="btn btn-danger" Text="Eliminar" runat="server" />
-                                            <asp:Button ID="btnReporte" CssClass="btn btn-inverse" Text="Reporte" runat="server" />
+                                            <asp:Button ID="btnAgregarNuevo" CssClass="btn" Text="Agregar Postulantes" runat="server" />
+                                            <asp:Button ID="btnEditar" CssClass="btn" Text="Editar" runat="server" />
+                                            <asp:Button ID="btnEliminar" CssClass="btn" Text="Eliminar" runat="server" />
 			                            </td>
 		                            </tr>
                                     <%} %>

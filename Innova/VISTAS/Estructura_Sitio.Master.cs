@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Innova.DAO;
 using Innova.DTO;
+using Innova.logica.util;
 
 namespace Innova.vistas
 {
@@ -87,14 +88,14 @@ namespace Innova.vistas
                 UsuarioDTO respuestaValidacion = usuarioDAO.ValidarUsuario(usuarioRegistrar);
                 if (respuestaValidacion != null)
                 {
-                    Session["usuario"] = respuestaValidacion._usuario;
+                    Session["usuario"] = respuestaValidacion;
                     Response.Redirect("index.aspx");
                 }
 
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Util.escribirLog(ex.Message);
             }
         }
 

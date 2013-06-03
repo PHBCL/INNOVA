@@ -22,6 +22,15 @@ namespace Innova.vistas {
         protected global::System.Web.UI.WebControls.Button btnNuevaIdea;
         
         /// <summary>
+        /// btnAgregarNuevo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAgregarNuevo;
+        
+        /// <summary>
         /// btnEditar control.
         /// </summary>
         /// <remarks>
@@ -38,14 +47,5 @@ namespace Innova.vistas {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnEliminar;
-        
-        /// <summary>
-        /// btnReporte control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnReporte;
     }
 }

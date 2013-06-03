@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+
 namespace Innova.vistas
 {
     public partial class m_ideas : System.Web.UI.Page
