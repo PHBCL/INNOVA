@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Innova.DAO;
+using Innova.DTO;
 
 namespace Innova.vistas
 {
@@ -30,7 +32,7 @@ namespace Innova.vistas
         {
             try
             {
-                Response.Redirect("index.aspx");
+                Response.Redirect("menu.aspx");
             }
             catch (Exception ex)
             {
@@ -69,6 +71,26 @@ namespace Innova.vistas
             try
             {
                 Response.Redirect("login.aspx");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        protected void btnIngresar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                UsuarioDTO usuarioRegistrar = new UsuarioDTO(txtNombre.Text, txtPassword.Text);
+                LoginDAO usuarioDAO = new LoginDAO();
+                UsuarioDTO respuestaValidacion = usuarioDAO.ValidarUsuario(usuarioRegistrar);
+                if (respuestaValidacion != null)
+                {
+                    Session["usuario"] = respuestaValidacion._usuario;
+                    Response.Redirect("index.aspx");
+                }
+
             }
             catch (Exception ex)
             {

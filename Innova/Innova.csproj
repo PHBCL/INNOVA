@@ -78,6 +78,7 @@
     <Content Include="css\login\estilo.css" />
     <Content Include="css\login\summer.theme-ie.css" />
     <Content Include="css\login\summer.theme.css" />
+    <Content Include="css\menu\DT_bootstrap.css" />
     <Content Include="css\menu\style.css" />
     <Content Include="css\proyecto\style.css" />
     <Content Include="css\royalslider\royalslider.css" />
@@ -242,6 +243,7 @@
     <Content Include="js\global\fancybox\jquery.fancybox.pack.js" />
     <Content Include="js\global\jquery-1.8.3.min.js" />
     <Content Include="js\global\jquery-1.9.1.min.js" />
+    <Content Include="js\global\jquery.dataTables.js" />
     <Content Include="js\global\menu\megamenu.min.js" />
     <Content Include="js\global\menu\megamenu_plugins.js" />
     <Content Include="js\index\jquery.cssAnimate.mini.js" />
@@ -260,6 +262,11 @@
     <Content Include="vistas\listaProyectoPorCategoria.aspx" />
     <Content Include="vistas\login.aspx" />
     <Content Include="vistas\menu.aspx" />
+    <Content Include="vistas\m_datos.aspx" />
+    <Content Include="vistas\m_ideas.aspx" />
+    <Content Include="vistas\m_mensaje.aspx" />
+    <Content Include="vistas\m_postulantes.aspx" />
+    <Content Include="vistas\nuevoProyecto.aspx" />
     <Content Include="vistas\proyecto.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -268,6 +275,13 @@
     <Compile Include="servicios\ServicioMenu.asmx.cs">
       <DependentUpon>ServicioMenu.asmx</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="vistas\Estructura_Menu.master.cs">
+      <DependentUpon>Estructura_Menu.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\Estructura_Menu.master.designer.cs">
+      <DependentUpon>Estructura_Menu.master</DependentUpon>
     </Compile>
     <Compile Include="vistas\Estructura_Sitio.Master.cs">
       <DependentUpon>Estructura_Sitio.Master</DependentUpon>
@@ -312,6 +326,41 @@
     <Compile Include="vistas\menu.aspx.designer.cs">
       <DependentUpon>menu.aspx</DependentUpon>
     </Compile>
+    <Compile Include="vistas\m_datos.aspx.cs">
+      <DependentUpon>m_datos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\m_datos.aspx.designer.cs">
+      <DependentUpon>m_datos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\m_ideas.aspx.cs">
+      <DependentUpon>m_ideas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\m_ideas.aspx.designer.cs">
+      <DependentUpon>m_ideas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\m_mensaje.aspx.cs">
+      <DependentUpon>m_mensaje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\m_mensaje.aspx.designer.cs">
+      <DependentUpon>m_mensaje.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\m_postulantes.aspx.cs">
+      <DependentUpon>m_postulantes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\m_postulantes.aspx.designer.cs">
+      <DependentUpon>m_postulantes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\nuevoProyecto.aspx.cs">
+      <DependentUpon>nuevoProyecto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\nuevoProyecto.aspx.designer.cs">
+      <DependentUpon>nuevoProyecto.aspx</DependentUpon>
+    </Compile>
     <Compile Include="vistas\proyecto.aspx.cs">
       <DependentUpon>proyecto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -327,6 +376,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="vistas\Estructura_Sitio.Master" />
+    <Content Include="vistas\Estructura_Menu.master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

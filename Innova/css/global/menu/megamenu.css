@@ -145,8 +145,8 @@ body {
 	height: 46px;
 	*height: 44px;
 	margin:0 auto;
-	position: relative;
 	z-index:9999;
+	/*position: relative;*/
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-ms-box-sizing: border-box;

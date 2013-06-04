@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/vistas/Estructura_Sitio.Master" AutoEventWireup="true" CodeBehind="Estructura_Menu.master.cs" Inherits="Innova.vistas.Estructura_Menu" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <link type="text/css" rel="stylesheet" href="../../css/menu/style.css"  />
+    <asp:ContentPlaceHolder ID="headMenu" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="contenido" runat="server">
+         <div class="sidebar">
+	        <div class="search"></div>
+	        <ul id="menu" class="ulMenu">
+		        <li class="liMenu"><asp:LinkButton ID="link" runat="server" OnClick="link_Click">Mis Ideas</asp:LinkButton></li>
+                <li class="liMenu"><asp:LinkButton ID="lnkPostulante" runat="server" OnClick="lnkPostulante_Click">Postulantes</asp:LinkButton></li>
+                <li class="liMenu"><asp:LinkButton ID="lnkMensajes" runat="server" OnClick="lnkMensajes_Click" >Mis Mensajes <span class="pip">1</span></asp:LinkButton></li>
+                <li class="liMenu"><asp:LinkButton ID="lnkDatos" runat="server" OnClick="lnkDatos_Click">Mis Datos</asp:LinkButton></li>
+                <li class="liMenu"><asp:LinkButton ID="lnkSalir" runat="server" OnClick="lnkSalir_Click">Salir</asp:LinkButton></li>
+	        </ul>
+           </div>
+          <div class="content">
+             <asp:ContentPlaceHolder ID="contenidoMenu" runat="server">
+                  
+             </asp:ContentPlaceHolder> 
+          </div>
+</asp:Content>
+
+

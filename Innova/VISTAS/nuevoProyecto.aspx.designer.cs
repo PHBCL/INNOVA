@@ -11,7 +11,7 @@ namespace Innova.vistas
 {
 
 
-    public partial class menu1
+    public partial class nuevoProyecto
     {
     }
 }

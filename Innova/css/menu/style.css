@@ -29,6 +29,7 @@ body {
 }
 
 .sidebar {
+    margin-top:126px;
 	height: 100%;
 	min-height: 100%;
 	width: 213px;
@@ -41,18 +42,18 @@ body {
 
 /**  MENU  **/
 
-ul {
+.ulMenu {
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
 
-ul li {
+.ulMenu .liMenu {
 	background: url(../../imagenes/menu/listBg.png) bottom no-repeat;
 	text-indent: 50px;
 }
 
-ul li a {
+.ulMenu .liMenu a {
 	color: white;
 	display: block;
 	text-decoration: none;
@@ -62,71 +63,72 @@ ul li a {
 	position:relative;
 }
 
-ul li:hover {
+.ulMenu .liMenu:hover {
 	background: url(../../imagenes/menu/listBgBlue.png) no-repeat;
 }
 
-ul li a:hover, ul li:hover a {
+.ulMenu .liMenu a:hover, .ulMenu .liMenu:hover a {
 	color: white;
 	text-shadow: 1px 1px 0 #166795;
 }
 
-ul li a.dashboard {
+.ulMenu .liMenu a.dashboard {
 	background: url(../../imagenes/menu/iconDashboard.png) 25px 50% no-repeat;
 }
 
-ul li a.pages {
+.ulMenu .liMenu a.pages {
 	background: url(../../imagenes/menu/iconPages.png) 25px 50% no-repeat;
 }
 
-ul li a.media {
+.ulMenu .liMenu a.media {
 	background: url(../../imagenes/menu/iconMedia.png) 25px 50% no-repeat;
 }
 
-ul li a.history {
+.ulMenu .liMenu a.history {
 	background: url(../../imagenes/menu/iconHistory.png) 25px 50% no-repeat;
 }
 
-ul li a.messages {
+.ulMenu .liMenu a.messages {
 	background: url(../../imagenes/menu/iconMessages.png) 25px 50% no-repeat;
 }
 
-ul li a.settings {
+.ulMenu .liMenu a.settings {
 	background: url(../../imagenes/menu/iconSettings.png) 25px 50% no-repeat;
 }
 
 /**  SUB MENU  **/
 
-ul li ul.submenu {
+.ulMenu .liMenu .ulMenu.submenu {
 	display: none;
 	z-index: 500;
 	top: 0;
 }
 
-ul li ul.submenu li {
+.ulMenu .liMenu .ulMenu.submenu liMenu {
 	background: url(../../imagenes/menu/subMenuBg.png) bottom no-repeat;
 }
 
-ul li ul.submenu li a {
+
+.ulMenu .liMenu .ulMenu.submenu liMenu a {
 	background: none;
 	padding: 13px;
 	width: 189px;
 }
 
-ul li ul.submenu li.last {
+.ulMenu .liMenu .ulMenu.submenu liMenu.last {
 	border-bottom: 1px solid #54575b;
 	background: url(../../imagenes/menu/subMenuBg.png) top no-repeat;
 }
 
-ul li ul.submenu li.last a {
+.ulMenu .liMenu .ulMenu.submenu liMenu.last a {
 	padding: 12px;
 }
 
-ul li:hover ul.submenu li a {
+.ulMenu .liMenu .ulMenu.submenu liMenu a {
 	text-shadow: 1px 1px 0 black;
 }
 
-ul li ul.submenu li:hover {
+.ulMenu .liMenu .ulMenu.submenu liMenu:hover {
 	background: url(../../imagenes/menu/subMenuBgHover.png) bottom no-repeat;
 }
 

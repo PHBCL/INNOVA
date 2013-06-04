@@ -36,7 +36,8 @@
     <link rel="stylesheet" href="../../css/global/menu/megamenu.css" />
     <!--[if lte IE 8 ]><link rel="stylesheet" type="text/css" href="../../css/index/ie.css" /><![endif]-->
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="../css/global/bootstrap.min.css"  />
+    
+        <link rel="stylesheet" type="text/css" href="../css/global/bootstrap.min.css">
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -56,7 +57,40 @@
                             <div id="contenedor-registro" >
                                <div class="btn-group" style="margin-top:10px;margin-left:5px;">
                                   <asp:Button id="btnCrearCuenta" runat="server" Text="Crear cuenta en IN" OnClick="btnCrearCuenta_Click" CssClass="btn" />
-                                  <asp:Button id="btnLogin" runat="server" Text="Ingresar" OnClick="btnLogin_Click" CssClass="btn"/>
+                                  <a href="#myModal" role="button" class="btn" data-toggle="modal">Ingresar</a>
+                                   <!-- Modal -->
+                                    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                      <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        <h3 id="myModalLabel">Login</h3>
+                                      </div>
+                                      <div class="modal-body">
+                                        <%if(usuario != null){ %>
+                                             <div class="control-group error">
+                                        <%}else{ %>
+                                             <div class="control-group info">
+                                        <%} %>
+                                             <div class="controls">
+                                                 <asp:TextBox ID="txtNombre" placeholder="Usuario" runat="server"></asp:TextBox><br /><br />
+                                             </div> 
+                                        <%if(usuario != null){ %>
+                                             <div class="control-group error">
+                                        <%}else{ %>
+                                             <div class="control-group info">
+                                        <%} %>
+                                             <div class="controls">
+                                                  <asp:TextBox ID="txtPassword" placeholder="Password" TextMode="Password" runat="server"></asp:TextBox><br /><br />
+                                             </div> 
+                                        </div>
+                                                 </div>
+                                                 </div>
+                                      <div class="modal-footer">
+                                         <asp:button id="btnIngresar" runat="server" type="submit"  CssClass="btn btn-medium  btn-primary" Text="Ingresar" OnClick="btnIngresar_Click"></asp:button>				
+                                         <button class="btn" data-dismiss="modal" aria-hidden="true">Cerrar</button>
+                                        
+                                      </div>
+                                    </div>
+
                                 </div>
                             </div>
                             <% }
@@ -75,7 +109,7 @@
                      <div class="megamenu_container megamenu_dark_bar megamenu_light">
                                 <ul class="megamenu">
                                     <% if(usuario != null){ %>
-                                    <li><asp:LinkButton ID="lnkInicio" runat="server" OnClick="verInicio_Click">Ir a mi Inicio</asp:LinkButton></li>
+                                    <li><asp:LinkButton ID="lnkInicio" runat="server" OnClick="verInicio_Click">Ir a mi escritorio</asp:LinkButton></li>
                                     <%} %>
                                     <li><a href="#_" class="megamenu_drop">Videos</a>
                                         <div class="dropdown_fullwidth">                    

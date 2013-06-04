@@ -10,61 +10,52 @@
 namespace Innova.vistas {
     
     
-    public partial class Estructura_Sitio {
+    public partial class Estructura_Menu {
         
         /// <summary>
-        /// head control.
+        /// headMenu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder headMenu;
         
         /// <summary>
-        /// form1 control.
+        /// link control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.LinkButton link;
         
         /// <summary>
-        /// btnCrearCuenta control.
+        /// lnkPostulante control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCrearCuenta;
+        protected global::System.Web.UI.WebControls.LinkButton lnkPostulante;
         
         /// <summary>
-        /// txtNombre control.
+        /// lnkMensajes control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNombre;
+        protected global::System.Web.UI.WebControls.LinkButton lnkMensajes;
         
         /// <summary>
-        /// txtPassword control.
+        /// lnkDatos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPassword;
-        
-        /// <summary>
-        /// btnIngresar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnIngresar;
+        protected global::System.Web.UI.WebControls.LinkButton lnkDatos;
         
         /// <summary>
         /// lnkSalir control.
@@ -76,21 +67,12 @@ namespace Innova.vistas {
         protected global::System.Web.UI.WebControls.LinkButton lnkSalir;
         
         /// <summary>
-        /// lnkInicio control.
+        /// contenidoMenu control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkInicio;
-        
-        /// <summary>
-        /// contenido control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder contenido;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder contenidoMenu;
     }
 }
