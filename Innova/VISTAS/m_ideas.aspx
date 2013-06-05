@@ -119,6 +119,7 @@
      <table cellpadding="0" cellspacing="0" border="0" class="bordered-table zebra-striped" id="example">
 	                            <thead>
 		                            <tr>
+                                        <td>ID</td>
 			                            <th>Nombre Idea</th>
 			                            <th>Fecha Ingreso</th>
 			                            <th>Estado</th>
@@ -126,18 +127,30 @@
 		                            </tr>
 	                            </thead>
 	                            <tbody>
-                                    <%for(int i=0;i<10;i++){ %>
-		                            <tr class="odd gradeX">
-			                            <td>Trident</td>
-			                            <td>Internet Explorer <%=i%></td>
-			                            <td>Win 95+</td>
-			                            <td class="center">
-                                            <asp:Button ID="btnAgregarNuevo" CssClass="btn" Text="Agregar Postulantes" runat="server" />
-                                            <asp:Button ID="btnEditar" CssClass="btn" Text="Editar" runat="server" />
-                                            <asp:Button ID="btnEliminar" CssClass="btn" Text="Eliminar" runat="server" />
-			                            </td>
-		                            </tr>
-                                    <%} %>
+                                    <% 
+                                        List<Innova.logica.bdd.PROYECTO>  listaProyecto = this.Context.Items["listaProyectos"] as List<Innova.logica.bdd.PROYECTO>;
+                                        if (listaProyecto != null)
+                                        {
+                                            for (int i = 0; i < listaProyecto.Count; i++)
+                                            {
+                                                Innova.logica.bdd.PROYECTO proyecto = listaProyecto[i];
+                                                string id = proyecto.ID_PROYECTO.ToString(); %>
+
+		                                    <tr class="odd gradeX">
+                                                <td><asp:Label ID="lblIdProyecto" runat="server"><%# currents id %></asp:Label></td>
+			                                    <td><%= proyecto.NOMBRE_PROYECTO%></td>
+			                                    <td><%= proyecto.FECHA_INGRESO%></td>
+			                                    <td>Activo</td>
+                                       
+			                                    <td class="center">
+                                                    <asp:Button ID="btnAgregarNuevo" CssClass="btn" Text="Agregar Postulantes" runat="server" />
+                                                    <asp:Button ID="btnEditar" CssClass="btn" Text="Editar" runat="server" />
+                                                    <asp:Button ID="btnEliminar" CssClass="btn" Text="Eliminar" runat="server" />
+                                                    
+			                                    </td>
+		                                    </tr>
+                                        <%}
+                                        } %>
                                     </tbody>
                                     </table>
                                     <!-- Modal -->

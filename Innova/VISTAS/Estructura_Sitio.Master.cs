@@ -6,7 +6,8 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Innova.DAO;
 using Innova.DTO;
-using Innova.logica.util;
+//using Innova.logica.util;
+using System.Diagnostics;
 
 namespace Innova.vistas
 {
@@ -89,13 +90,14 @@ namespace Innova.vistas
                 if (respuestaValidacion != null)
                 {
                     Session["usuario"] = respuestaValidacion;
-                    Response.Redirect("index.aspx");
+                    Response.Redirect("index.aspx",false);
                 }
 
             }
             catch (Exception ex)
             {
-                Util.escribirLog(ex.Message);
+                Debug.WriteLine(ex.Message);
+                //Util.escribirLog(ex.Message);
             }
         }
 

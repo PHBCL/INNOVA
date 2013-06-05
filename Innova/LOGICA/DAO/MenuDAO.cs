@@ -46,5 +46,24 @@ namespace Innova.logica.DAO
                 throw ex;
             }
         }
+
+        public List<PROYECTO> obtenerProyectos(int idUsuario)
+        {
+            try
+            {
+                using (InnovaDataClassesDataContext db = new InnovaDataClassesDataContext())
+                {
+                    List<PROYECTO> lista = (from proyectos in db.PROYECTOs
+                                            where proyectos.ID_USUARIO == idUsuario
+                                            select proyectos).ToList();
+                    return lista;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+        }
     }
 }

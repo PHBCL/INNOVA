@@ -272,7 +272,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="logica\DAO\MenuDAO.cs" />
-    <Compile Include="logica\util\Util.cs" />
     <Compile Include="servicios\ServicioMenu.asmx.cs">
       <DependentUpon>ServicioMenu.asmx</DependentUpon>
       <SubType>Component</SubType>
@@ -393,7 +392,9 @@
       <DependentUpon>InnovaDataClasses.dbml</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="logica\util\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

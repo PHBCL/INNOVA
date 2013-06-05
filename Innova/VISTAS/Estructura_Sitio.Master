@@ -50,7 +50,7 @@
                                      <img src="images/logo.png" />
                             </div>
                             <%
-                               Innova.DTO.UsuarioDTO usuario = this.Context.Items["usuario"] as Innova.DTO.UsuarioDTO;
+                               Innova.DTO.UsuarioDTO usuario = Session["usuario"] as Innova.DTO.UsuarioDTO;
                                if(usuario == null)
                                {   
                             %>
